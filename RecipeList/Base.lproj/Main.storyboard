@@ -20,10 +20,12 @@
                     <connections>
                         <segue destination="mbJ-F7-xVz" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="oUK-cq-Dqv"/>
                         <segue destination="MeM-4F-ZnN" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="nXV-2u-6rE"/>
+                        <segue destination="uMo-5M-f2S" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="HeJ-V3-h36"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="341" y="391"/>
         </scene>
         <!--Navigation Menu Table View Controller-->
         <scene sceneID="3gl-3O-qCd">
@@ -32,7 +34,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="14j-4l-IET">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.34572882399999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.61434922039999995" green="0.85903365669999998" blue="0.52903283020000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NavigationMenuCell" textLabel="a42-5K-mw3" style="IBUITableViewCellStyleDefault" id="nmp-zz-TDc">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -54,6 +56,10 @@
                             <outlet property="delegate" destination="MeM-4F-ZnN" id="Frd-xc-YGx"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="mbJ-F7-xVz" kind="custom" identifier="GoToContent1" customClass="SWRevealViewControllerSeguePushController" id="Y7X-a4-ZKo"/>
+                        <segue destination="uMo-5M-f2S" kind="custom" identifier="GoToContent2" customClass="SWRevealViewControllerSeguePushController" id="Gno-Gh-JaL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Pt-ZX-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,9 +79,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4Z-tB-pMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="1097"/>
+            <point key="canvasLocation" x="577" y="1161"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Content 1-->
         <scene sceneID="LTj-6O-vsJ">
             <objects>
                 <viewController id="i9J-hE-ral" customClass="MainViewController" customModule="RecipeList" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.020100812990000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8ko-Pd-Tcd">
+                    <navigationItem key="navigationItem" title="Content 1" id="8ko-Pd-Tcd">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="KzS-nu-hkH"/>
                     </navigationItem>
                     <connections>
@@ -99,5 +105,49 @@
             </objects>
             <point key="canvasLocation" x="1268" y="1082"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5e9-u7-546">
+            <objects>
+                <navigationController id="uMo-5M-f2S" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5KC-8W-rsz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SGN-6x-Fez" kind="relationship" relationship="rootViewController" id="1Xs-vL-dco"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stK-1O-eqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="1855"/>
+        </scene>
+        <!--Content 2-->
+        <scene sceneID="bAv-Hk-Wtf">
+            <objects>
+                <viewController id="SGN-6x-Fez" customClass="MainViewController" customModule="RecipeList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vmy-dt-8mz"/>
+                        <viewControllerLayoutGuide type="bottom" id="CpU-nN-OlK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mzk-XB-vDS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.34572882399999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Content 2" id="0TG-it-tnS">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Pyf-J2-iup"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="Pyf-J2-iup" id="NEc-3G-4lG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJT-HM-R15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273" y="1751"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y7X-a4-ZKo"/>
+        <segue reference="Gno-Gh-JaL"/>
+    </inferredMetricsTieBreakers>
 </document>

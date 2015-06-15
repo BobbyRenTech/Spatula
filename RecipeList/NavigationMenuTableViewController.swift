@@ -36,15 +36,26 @@ class NavigationMenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 3
+        return 2
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NavigationMenuCell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
-        cell.textLabel!.text = "Menu item"
+        cell.textLabel!.text = "Menu item \(indexPath.row)"
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if (indexPath.row == 0) {
+            self.performSegueWithIdentifier("GoToContent1", sender: nil)
+        }
+        else {
+            self.performSegueWithIdentifier("GoToContent2", sender: nil)
+        }
     }
 
     /*
