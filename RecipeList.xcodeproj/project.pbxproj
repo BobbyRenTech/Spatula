@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		AC1422331B2E44B400978990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422321B2E44B400978990 /* AppDelegate.swift */; };
 		AC1422361B2E44B400978990 /* RecipeList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC1422341B2E44B400978990 /* RecipeList.xcdatamodeld */; };
-		AC1422381B2E44B400978990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422371B2E44B400978990 /* ViewController.swift */; };
 		AC14223B1B2E44B400978990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1422391B2E44B400978990 /* Main.storyboard */; };
 		AC14223D1B2E44B400978990 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC14223C1B2E44B400978990 /* Images.xcassets */; };
 		AC1422401B2E44B400978990 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC14223E1B2E44B400978990 /* LaunchScreen.xib */; };
 		AC14224C1B2E44B400978990 /* RecipeListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC14224B1B2E44B400978990 /* RecipeListTests.swift */; };
+		AC1422581B2E47C400978990 /* NavigationMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */; };
+		AC14225A1B2E47E900978990 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422591B2E47E900978990 /* MainViewController.swift */; };
 		DB533FC4E082D1A020C465B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9730DE32BE8C312909399248 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,13 +35,15 @@
 		AC1422311B2E44B400978990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1422321B2E44B400978990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1422351B2E44B400978990 /* RecipeList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeList.xcdatamodel; sourceTree = "<group>"; };
-		AC1422371B2E44B400978990 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC14223A1B2E44B400978990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC14223C1B2E44B400978990 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC14223F1B2E44B400978990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AC1422451B2E44B400978990 /* RecipeListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC14224A1B2E44B400978990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC14224B1B2E44B400978990 /* RecipeListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListTests.swift; sourceTree = "<group>"; };
+		AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTableViewController.swift; sourceTree = "<group>"; };
+		AC1422591B2E47E900978990 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AC14225B1B2E485300978990 /* RecipeList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecipeList-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE83C750C24A8397CA56ED18 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,12 +107,14 @@
 			isa = PBXGroup;
 			children = (
 				AC1422321B2E44B400978990 /* AppDelegate.swift */,
-				AC1422371B2E44B400978990 /* ViewController.swift */,
 				AC1422391B2E44B400978990 /* Main.storyboard */,
+				AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */,
+				AC1422591B2E47E900978990 /* MainViewController.swift */,
 				AC14223C1B2E44B400978990 /* Images.xcassets */,
 				AC14223E1B2E44B400978990 /* LaunchScreen.xib */,
 				AC1422341B2E44B400978990 /* RecipeList.xcdatamodeld */,
 				AC1422301B2E44B400978990 /* Supporting Files */,
+				AC14225B1B2E485300978990 /* RecipeList-Bridging-Header.h */,
 			);
 			path = RecipeList;
 			sourceTree = "<group>";
@@ -274,9 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1422381B2E44B400978990 /* ViewController.swift in Sources */,
 				AC1422331B2E44B400978990 /* AppDelegate.swift in Sources */,
+				AC1422581B2E47C400978990 /* NavigationMenuTableViewController.swift in Sources */,
 				AC1422361B2E44B400978990 /* RecipeList.xcdatamodeld in Sources */,
+				AC14225A1B2E47E900978990 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,9 +410,12 @@
 			baseConfigurationReference = 82E4DEB054C3AE6E60D1B189 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RecipeList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecipeList/RecipeList-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -415,9 +424,11 @@
 			baseConfigurationReference = CE83C750C24A8397CA56ED18 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RecipeList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecipeList/RecipeList-Bridging-Header.h";
 			};
 			name = Release;
 		};
