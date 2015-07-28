@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		AC1422331B2E44B400978990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422321B2E44B400978990 /* AppDelegate.swift */; };
 		AC1422361B2E44B400978990 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC1422341B2E44B400978990 /* Model.xcdatamodeld */; };
-		AC14223B1B2E44B400978990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1422391B2E44B400978990 /* Main.storyboard */; };
+		AC14223B1B2E44B400978990 /* Reveal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1422391B2E44B400978990 /* Reveal.storyboard */; };
 		AC14223D1B2E44B400978990 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC14223C1B2E44B400978990 /* Images.xcassets */; };
 		AC1422401B2E44B400978990 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC14223E1B2E44B400978990 /* LaunchScreen.xib */; };
 		AC14224C1B2E44B400978990 /* SpatulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC14224B1B2E44B400978990 /* SpatulaTests.swift */; };
 		AC1422581B2E47C400978990 /* NavigationMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */; };
 		AC14225A1B2E47E900978990 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422591B2E47E900978990 /* MainViewController.swift */; };
+		AC4E71041B68163800588870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4E71031B68163800588870 /* Main.storyboard */; };
 		DB533FC4E082D1A020C465B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9730DE32BE8C312909399248 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +36,7 @@
 		AC1422311B2E44B400978990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1422321B2E44B400978990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1422351B2E44B400978990 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		AC14223A1B2E44B400978990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC14223A1B2E44B400978990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reveal.storyboard; sourceTree = "<group>"; };
 		AC14223C1B2E44B400978990 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC14223F1B2E44B400978990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AC1422451B2E44B400978990 /* SpatulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpatulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTableViewController.swift; sourceTree = "<group>"; };
 		AC1422591B2E47E900978990 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC14225B1B2E485300978990 /* Spatula-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spatula-Bridging-Header.h"; sourceTree = "<group>"; };
+		AC4E71031B68163800588870 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE83C750C24A8397CA56ED18 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				AC1422321B2E44B400978990 /* AppDelegate.swift */,
-				AC1422391B2E44B400978990 /* Main.storyboard */,
+				AC1422391B2E44B400978990 /* Reveal.storyboard */,
+				AC4E71031B68163800588870 /* Main.storyboard */,
 				AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */,
 				AC1422591B2E47E900978990 /* MainViewController.swift */,
 				AC14223C1B2E44B400978990 /* Images.xcassets */,
@@ -226,9 +229,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC14223B1B2E44B400978990 /* Main.storyboard in Resources */,
+				AC14223B1B2E44B400978990 /* Reveal.storyboard in Resources */,
 				AC1422401B2E44B400978990 /* LaunchScreen.xib in Resources */,
 				AC14223D1B2E44B400978990 /* Images.xcassets in Resources */,
+				AC4E71041B68163800588870 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +309,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AC1422391B2E44B400978990 /* Main.storyboard */ = {
+		AC1422391B2E44B400978990 /* Reveal.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC14223A1B2E44B400978990 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Reveal.storyboard;
 			sourceTree = "<group>";
 		};
 		AC14223E1B2E44B400978990 /* LaunchScreen.xib */ = {
