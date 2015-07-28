@@ -1,4 +1,4 @@
-# Saucable
+# Spatula
 
 Use this project to play with your storyboard/flow.
 
