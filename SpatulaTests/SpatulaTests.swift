@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class SaucableTests: XCTestCase {
+class SpatulaTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

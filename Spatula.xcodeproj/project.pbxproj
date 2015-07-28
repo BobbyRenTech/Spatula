@@ -12,7 +12,7 @@
 		AC14223B1B2E44B400978990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1422391B2E44B400978990 /* Main.storyboard */; };
 		AC14223D1B2E44B400978990 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC14223C1B2E44B400978990 /* Images.xcassets */; };
 		AC1422401B2E44B400978990 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC14223E1B2E44B400978990 /* LaunchScreen.xib */; };
-		AC14224C1B2E44B400978990 /* SaucableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC14224B1B2E44B400978990 /* SaucableTests.swift */; };
+		AC14224C1B2E44B400978990 /* SpatulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC14224B1B2E44B400978990 /* SpatulaTests.swift */; };
 		AC1422581B2E47C400978990 /* NavigationMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */; };
 		AC14225A1B2E47E900978990 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1422591B2E47E900978990 /* MainViewController.swift */; };
 		DB533FC4E082D1A020C465B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9730DE32BE8C312909399248 /* libPods.a */; };
@@ -31,19 +31,19 @@
 /* Begin PBXFileReference section */
 		82E4DEB054C3AE6E60D1B189 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9730DE32BE8C312909399248 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC14222D1B2E44B400978990 /* Saucable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saucable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC14222D1B2E44B400978990 /* Spatula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spatula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1422311B2E44B400978990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1422321B2E44B400978990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1422351B2E44B400978990 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AC14223A1B2E44B400978990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC14223C1B2E44B400978990 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC14223F1B2E44B400978990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		AC1422451B2E44B400978990 /* SaucableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaucableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1422451B2E44B400978990 /* SpatulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpatulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC14224A1B2E44B400978990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC14224B1B2E44B400978990 /* SaucableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaucableTests.swift; sourceTree = "<group>"; };
+		AC14224B1B2E44B400978990 /* SpatulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatulaTests.swift; sourceTree = "<group>"; };
 		AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTableViewController.swift; sourceTree = "<group>"; };
 		AC1422591B2E47E900978990 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		AC14225B1B2E485300978990 /* Saucable-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Saucable-Bridging-Header.h"; sourceTree = "<group>"; };
+		AC14225B1B2E485300978990 /* Spatula-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spatula-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE83C750C24A8397CA56ED18 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +86,8 @@
 		AC1422241B2E44B400978990 = {
 			isa = PBXGroup;
 			children = (
-				AC14222F1B2E44B400978990 /* Saucable */,
-				AC1422481B2E44B400978990 /* SaucableTests */,
+				AC14222F1B2E44B400978990 /* Spatula */,
+				AC1422481B2E44B400978990 /* SpatulaTests */,
 				AC14222E1B2E44B400978990 /* Products */,
 				35798983D0776D91F4592930 /* Pods */,
 				A7A49727C27BFD4251813B71 /* Frameworks */,
@@ -97,13 +97,13 @@
 		AC14222E1B2E44B400978990 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC14222D1B2E44B400978990 /* Saucable.app */,
-				AC1422451B2E44B400978990 /* SaucableTests.xctest */,
+				AC14222D1B2E44B400978990 /* Spatula.app */,
+				AC1422451B2E44B400978990 /* SpatulaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC14222F1B2E44B400978990 /* Saucable */ = {
+		AC14222F1B2E44B400978990 /* Spatula */ = {
 			isa = PBXGroup;
 			children = (
 				AC1422321B2E44B400978990 /* AppDelegate.swift */,
@@ -114,9 +114,9 @@
 				AC14223E1B2E44B400978990 /* LaunchScreen.xib */,
 				AC1422341B2E44B400978990 /* Model.xcdatamodeld */,
 				AC1422301B2E44B400978990 /* Supporting Files */,
-				AC14225B1B2E485300978990 /* Saucable-Bridging-Header.h */,
+				AC14225B1B2E485300978990 /* Spatula-Bridging-Header.h */,
 			);
-			path = Saucable;
+			path = Spatula;
 			sourceTree = "<group>";
 		};
 		AC1422301B2E44B400978990 /* Supporting Files */ = {
@@ -127,13 +127,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AC1422481B2E44B400978990 /* SaucableTests */ = {
+		AC1422481B2E44B400978990 /* SpatulaTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC14224B1B2E44B400978990 /* SaucableTests.swift */,
+				AC14224B1B2E44B400978990 /* SpatulaTests.swift */,
 				AC1422491B2E44B400978990 /* Supporting Files */,
 			);
-			path = SaucableTests;
+			path = SpatulaTests;
 			sourceTree = "<group>";
 		};
 		AC1422491B2E44B400978990 /* Supporting Files */ = {
@@ -147,9 +147,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC14222C1B2E44B400978990 /* Saucable */ = {
+		AC14222C1B2E44B400978990 /* Spatula */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC14224F1B2E44B400978990 /* Build configuration list for PBXNativeTarget "Saucable" */;
+			buildConfigurationList = AC14224F1B2E44B400978990 /* Build configuration list for PBXNativeTarget "Spatula" */;
 			buildPhases = (
 				78EA03367E22B1E14CCFAC31 /* Check Pods Manifest.lock */,
 				AC1422291B2E44B400978990 /* Sources */,
@@ -161,14 +161,14 @@
 			);
 			dependencies = (
 			);
-			name = Saucable;
+			name = Spatula;
 			productName = RecipeList;
-			productReference = AC14222D1B2E44B400978990 /* Saucable.app */;
+			productReference = AC14222D1B2E44B400978990 /* Spatula.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AC1422441B2E44B400978990 /* SaucableTests */ = {
+		AC1422441B2E44B400978990 /* SpatulaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC1422521B2E44B400978990 /* Build configuration list for PBXNativeTarget "SaucableTests" */;
+			buildConfigurationList = AC1422521B2E44B400978990 /* Build configuration list for PBXNativeTarget "SpatulaTests" */;
 			buildPhases = (
 				AC1422411B2E44B400978990 /* Sources */,
 				AC1422421B2E44B400978990 /* Frameworks */,
@@ -179,9 +179,9 @@
 			dependencies = (
 				AC1422471B2E44B400978990 /* PBXTargetDependency */,
 			);
-			name = SaucableTests;
+			name = SpatulaTests;
 			productName = RecipeListTests;
-			productReference = AC1422451B2E44B400978990 /* SaucableTests.xctest */;
+			productReference = AC1422451B2E44B400978990 /* SpatulaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -202,7 +202,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AC1422281B2E44B400978990 /* Build configuration list for PBXProject "Saucable" */;
+			buildConfigurationList = AC1422281B2E44B400978990 /* Build configuration list for PBXProject "Spatula" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -215,8 +215,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC14222C1B2E44B400978990 /* Saucable */,
-				AC1422441B2E44B400978990 /* SaucableTests */,
+				AC14222C1B2E44B400978990 /* Spatula */,
+				AC1422441B2E44B400978990 /* SpatulaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC14224C1B2E44B400978990 /* SaucableTests.swift in Sources */,
+				AC14224C1B2E44B400978990 /* SpatulaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +299,7 @@
 /* Begin PBXTargetDependency section */
 		AC1422471B2E44B400978990 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AC14222C1B2E44B400978990 /* Saucable */;
+			target = AC14222C1B2E44B400978990 /* Spatula */;
 			targetProxy = AC1422461B2E44B400978990 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -411,10 +411,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Saucable/Info.plist;
+				INFOPLIST_FILE = Spatula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Saucable;
-				SWIFT_OBJC_BRIDGING_HEADER = "Saucable/Saucable-Bridging-Header.h";
+				PRODUCT_NAME = Spatula;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spatula/Spatula-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -425,10 +425,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Saucable/Info.plist;
+				INFOPLIST_FILE = Spatula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Saucable;
-				SWIFT_OBJC_BRIDGING_HEADER = "Saucable/Saucable-Bridging-Header.h";
+				PRODUCT_NAME = Spatula;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spatula/Spatula-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -444,10 +444,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SaucableTests/Info.plist;
+				INFOPLIST_FILE = SpatulaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = SaucableTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saucable.app/Saucable";
+				PRODUCT_NAME = SpatulaTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spatula.app/Spatula";
 			};
 			name = Debug;
 		};
@@ -459,17 +459,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SaucableTests/Info.plist;
+				INFOPLIST_FILE = SpatulaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = SaucableTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saucable.app/Saucable";
+				PRODUCT_NAME = SpatulaTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spatula.app/Spatula";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC1422281B2E44B400978990 /* Build configuration list for PBXProject "Saucable" */ = {
+		AC1422281B2E44B400978990 /* Build configuration list for PBXProject "Spatula" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC14224D1B2E44B400978990 /* Debug */,
@@ -478,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC14224F1B2E44B400978990 /* Build configuration list for PBXNativeTarget "Saucable" */ = {
+		AC14224F1B2E44B400978990 /* Build configuration list for PBXNativeTarget "Spatula" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC1422501B2E44B400978990 /* Debug */,
@@ -487,7 +487,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC1422521B2E44B400978990 /* Build configuration list for PBXNativeTarget "SaucableTests" */ = {
+		AC1422521B2E44B400978990 /* Build configuration list for PBXNativeTarget "SpatulaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC1422531B2E44B400978990 /* Debug */,
