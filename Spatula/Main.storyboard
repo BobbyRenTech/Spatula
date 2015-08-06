@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="113" y="1488"/>
         </scene>
-        <!--View Controller-->
+        <!--Meal Plan View Controller-->
         <scene sceneID="Z0h-8m-eEJ">
             <objects>
-                <viewController id="eQW-V2-Ynd" sceneMemberID="viewController">
+                <viewController id="eQW-V2-Ynd" customClass="MealPlanViewController" customModule="Spatula" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Prv-ei-AaZ"/>
                         <viewControllerLayoutGuide type="bottom" id="LKi-C7-7j8"/>
@@ -162,33 +162,130 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AC-tK-vPY" userLabel="Content">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="521"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RH-7j-TLA">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RH-7j-TLA" userLabel="meals">
                                         <rect key="frame" x="0.0" y="21" width="600" height="171"/>
-                                        <color key="backgroundColor" red="0.40809731189999998" green="1" blue="0.1867510161" alpha="1" colorSpace="calibratedRGB"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2eE-3J-zyc" userLabel="meals container">
+                                                <rect key="frame" x="0.0" y="0.0" width="800" height="171"/>
+                                                <subviews>
+                                                    <imageView tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japanese-food-222255_640" translatesAutoresizingMaskIntoConstraints="NO" id="oAv-TM-7Ng">
+                                                        <rect key="frame" x="172" y="0.0" width="171" height="171"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="171" id="3pC-h7-s9u"/>
+                                                            <constraint firstAttribute="height" constant="171" id="tIK-g9-ojP"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="rCP-eo-h4j" appends="YES" id="5Si-aA-Ewf"/>
+                                                        </connections>
+                                                    </imageView>
+                                                    <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quail_food" translatesAutoresizingMaskIntoConstraints="NO" id="bUU-J9-IT6">
+                                                        <rect key="frame" x="344" y="0.0" width="171" height="171"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="171" id="e5V-sR-ntm"/>
+                                                            <constraint firstAttribute="height" constant="171" id="vPf-YB-MMp"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="lrc-Vg-M7a" appends="YES" id="I1V-q0-Oiv"/>
+                                                        </connections>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="670px-Get-Rid-of-Food-Poisoning-Step-1" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-2b-gEb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="171" id="36M-Lg-u3r"/>
+                                                            <constraint firstAttribute="height" constant="171" id="8ql-ap-zhg"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="dtV-2b-gEb" firstAttribute="top" secondItem="2eE-3J-zyc" secondAttribute="top" id="A22-El-IxF"/>
+                                                    <constraint firstAttribute="width" constant="800" id="FXg-5C-tMu"/>
+                                                    <constraint firstItem="dtV-2b-gEb" firstAttribute="leading" secondItem="2eE-3J-zyc" secondAttribute="leading" id="P7Y-9g-lQm"/>
+                                                    <constraint firstItem="bUU-J9-IT6" firstAttribute="top" secondItem="oAv-TM-7Ng" secondAttribute="top" id="Wlz-8p-yGO"/>
+                                                    <constraint firstItem="dtV-2b-gEb" firstAttribute="top" secondItem="oAv-TM-7Ng" secondAttribute="top" id="ZSr-XP-nt5"/>
+                                                    <constraint firstItem="oAv-TM-7Ng" firstAttribute="leading" secondItem="dtV-2b-gEb" secondAttribute="trailing" constant="1" id="i0l-fx-2MR"/>
+                                                    <constraint firstItem="bUU-J9-IT6" firstAttribute="leading" secondItem="oAv-TM-7Ng" secondAttribute="trailing" constant="1" id="nlN-ae-yoL"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="centerY" secondItem="2eE-3J-zyc" secondAttribute="centerY" id="Hmv-wV-3cU"/>
+                                            <constraint firstItem="2eE-3J-zyc" firstAttribute="leading" secondItem="9RH-7j-TLA" secondAttribute="leading" id="JoN-Ro-GLr"/>
                                             <constraint firstAttribute="height" constant="171" id="OB0-Ly-5dT"/>
+                                            <constraint firstAttribute="height" secondItem="2eE-3J-zyc" secondAttribute="height" id="kBo-bE-5iU"/>
                                         </constraints>
                                     </scrollView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZU-MG-LIk" userLabel="details">
-                                        <rect key="frame" x="0.0" y="192" width="600" height="329"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-Mq-UPk" userLabel="meal details">
+                                        <rect key="frame" x="0.0" y="191" width="600" height="330"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZU-MG-LIk" userLabel="details">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="329"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rwq-XK-tVI">
+                                                        <rect key="frame" x="14" y="24" width="578" height="29"/>
+                                                        <segments>
+                                                            <segment title="Overview"/>
+                                                            <segment title="Ingredients"/>
+                                                            <segment title="Receipe"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Svj-hP-nUn" userLabel="summary">
+                                                        <rect key="frame" x="0.0" y="77" width="605" height="244"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Curry &amp; Rice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIu-Su-mEH">
+                                                                <rect key="frame" x="7" y="0.0" width="97" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200 Calories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hux-KZ-9Fg">
+                                                                <rect key="frame" x="8" y="32" width="96" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15 Minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qj5-Vo-iby">
+                                                                <rect key="frame" x="8" y="55" width="85" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ 3.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-qr-mtq">
+                                                                <rect key="frame" x="8" y="77" width="48" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.95235558712121215" green="0.95235558712121215" blue="0.95235558712121215" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.99122080176767668" green="0.99122080176767668" blue="0.99122080176767668" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kZU-MG-LIk" firstAttribute="top" secondItem="DOb-Mq-UPk" secondAttribute="top" id="P8V-TL-4FH"/>
+                                            <constraint firstAttribute="centerX" secondItem="kZU-MG-LIk" secondAttribute="centerX" id="dTh-R3-kn6"/>
+                                            <constraint firstAttribute="width" secondItem="kZU-MG-LIk" secondAttribute="width" id="ggf-lS-FeS"/>
+                                        </constraints>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="kZU-MG-LIk" firstAttribute="leading" secondItem="6AC-tK-vPY" secondAttribute="leading" id="80m-9X-hAk"/>
-                                    <constraint firstItem="kZU-MG-LIk" firstAttribute="top" secondItem="9RH-7j-TLA" secondAttribute="bottom" id="FML-zw-nNN"/>
                                     <constraint firstAttribute="trailing" secondItem="9RH-7j-TLA" secondAttribute="trailing" id="TVy-Gp-WAm"/>
-                                    <constraint firstAttribute="bottom" secondItem="kZU-MG-LIk" secondAttribute="bottom" id="WVF-Z0-cQN"/>
-                                    <constraint firstAttribute="width" secondItem="kZU-MG-LIk" secondAttribute="width" id="lMp-ag-LDa"/>
+                                    <constraint firstAttribute="centerX" secondItem="DOb-Mq-UPk" secondAttribute="centerX" id="ljY-yT-gG1"/>
                                     <constraint firstItem="9RH-7j-TLA" firstAttribute="top" secondItem="6AC-tK-vPY" secondAttribute="top" constant="21" id="mV7-m1-kny"/>
+                                    <constraint firstItem="DOb-Mq-UPk" firstAttribute="width" secondItem="6AC-tK-vPY" secondAttribute="width" id="pww-Zg-EMi"/>
+                                    <constraint firstItem="DOb-Mq-UPk" firstAttribute="top" secondItem="9RH-7j-TLA" secondAttribute="bottom" constant="-1" id="sbN-R6-lam"/>
                                     <constraint firstItem="9RH-7j-TLA" firstAttribute="leading" secondItem="6AC-tK-vPY" secondAttribute="leading" id="wdZ-Lf-H1e"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2X1-Rp-wyv">
                                 <rect key="frame" x="0.0" y="521" width="600" height="30"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Buy Meal">
+                                <state key="normal" title="Buy Sweet Tooth Meal Plan (15 Meals)">
                                     <color key="titleColor" red="0.97985716540000001" green="0.97985716540000001" blue="0.97985716540000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -202,6 +299,7 @@
                             <constraint firstItem="6AC-tK-vPY" firstAttribute="top" secondItem="Prv-ei-AaZ" secondAttribute="bottom" constant="-20" id="Ree-KO-nDd"/>
                             <constraint firstItem="2X1-Rp-wyv" firstAttribute="leading" secondItem="lBc-DU-7tD" secondAttribute="leading" id="W9v-ae-4jZ"/>
                             <constraint firstAttribute="centerX" secondItem="6AC-tK-vPY" secondAttribute="centerX" id="cRd-wb-RP6"/>
+                            <constraint firstItem="2X1-Rp-wyv" firstAttribute="top" secondItem="DOb-Mq-UPk" secondAttribute="bottom" id="k00-ZZ-INd"/>
                             <constraint firstAttribute="width" secondItem="2X1-Rp-wyv" secondAttribute="width" id="u12-hI-VAQ"/>
                             <constraint firstItem="2X1-Rp-wyv" firstAttribute="top" secondItem="LKi-C7-7j8" secondAttribute="bottom" constant="60" id="w1N-ga-7EC"/>
                         </constraints>
@@ -211,8 +309,26 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="meal1Image" destination="dtV-2b-gEb" id="fgV-rS-4dG"/>
+                        <outlet property="meal2Image" destination="oAv-TM-7Ng" id="rbl-2Z-qbZ"/>
+                        <outlet property="meal3Image" destination="bUU-J9-IT6" id="mh6-z1-UFi"/>
+                        <outlet property="mealDetailsScrollView" destination="DOb-Mq-UPk" id="yuo-b6-Ybc"/>
+                        <outlet property="mealTitle" destination="aIu-Su-mEH" id="qMG-LI-CKN"/>
+                        <outlet property="scrollMeals" destination="9RH-7j-TLA" id="34I-ZP-p16"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUz-hb-k3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rCP-eo-h4j">
+                    <connections>
+                        <action selector="tapMeal2:" destination="eQW-V2-Ynd" id="Hqk-9R-O0I"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lrc-Vg-M7a">
+                    <connections>
+                        <action selector="tapMeal2:" destination="eQW-V2-Ynd" id="mPa-PU-A7t"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-604" y="2320"/>
         </scene>
@@ -353,6 +469,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="670px-Get-Rid-of-Food-Poisoning-Step-1" width="670" height="447"/>
+        <image name="Quail_food" width="1280" height="960"/>
         <image name="food1" width="518" height="522"/>
+        <image name="japanese-food-222255_640" width="640" height="426"/>
     </resources>
 </document>
