@@ -8,26 +8,43 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UITableViewController {
 
-    @IBOutlet weak var resultsScrollView: UIScrollView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        resultsScrollView.contentSize.height = 1000
-        resultsScrollView.scrollEnabled = true
     }
 
     @IBAction func buttonTap(sender: AnyObject) {
         performSegueWithIdentifier("details", sender: sender)
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Datasource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let imageView: UIImageView = cell.contentView.viewWithTag(1)
+        let label: UILabel = cell.viewWithTag(2)
+        return cell
+    }
 
+    // MARK: Delegate
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Row \(indexPath.row)")
+    }
+    
     /*
     // MARK: - Navigation
 
