@@ -35,8 +35,10 @@ class SearchViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        
         let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
         let label: UILabel = cell.viewWithTag(2) as! UILabel
+        
         return cell
     }
 
