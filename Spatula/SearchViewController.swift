@@ -25,23 +25,23 @@ class SearchViewController: UITableViewController {
     }
     
     // MARK: Datasource
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-        let imageView: UIImageView = cell.contentView.viewWithTag(1)
-        let label: UILabel = cell.viewWithTag(2)
+        let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
+        let label: UILabel = cell.viewWithTag(2) as! UILabel
         return cell
     }
 
     // MARK: Delegate
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Row \(indexPath.row)")
     }
     
