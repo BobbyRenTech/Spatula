@@ -8,6 +8,8 @@
 
 import UIKit
 
+var singleton: RecipeDataSource?
+
 class RecipeDataSource: NSObject {
     let images: [String] = ["food1",
         "food2",
@@ -48,6 +50,19 @@ class RecipeDataSource: NSObject {
         "Everything on this plate is shapeless, formless and is a surprise to your palate. This might actually be a dessert."
     ]
     
+    class func instance() -> RecipeDataSource {
+        // only returns one instance.
+        if singleton == nil {
+            singleton = RecipeDataSource()
+        }
+        
+        return singleton!
+    }
+    
+    func recipeCount() -> Int {
+        return names.count
+    }
+    
     func image(index: Int) -> UIImage {
         return UIImage(named: images[index])!
     }
@@ -60,7 +75,7 @@ class RecipeDataSource: NSObject {
         return descriptions[index]
     }
     
-    func longDesscriptions(index: Int) -> String {
+    func longDescriptions(index: Int) -> String {
         let short = self.shortDescriptions(index)
         return "\(short) \(short) \(short)"
     }

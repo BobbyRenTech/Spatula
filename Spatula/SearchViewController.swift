@@ -9,6 +9,8 @@
 import UIKit
 
 class SearchViewController: UITableViewController {
+    
+    var source: RecipeDataSource = RecipeDataSource.instance()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,7 @@ class SearchViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.source.recipeCount()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -39,7 +41,15 @@ class SearchViewController: UITableViewController {
         let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
         let label: UILabel = cell.viewWithTag(2) as! UILabel
         
+        let row = indexPath.row
+        imageView.image = self.source.image(row)
+        label.text = self.source.name(row)
+        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 120
     }
 
     // MARK: Delegate
