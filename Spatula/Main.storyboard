@@ -306,6 +306,10 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-re-dTQ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="139.5"/>
                                         </imageView>
+                                        <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EB-tt-1pE" userLabel="View - dark overlay">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="139"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTY-lp-Fvb">
                                             <rect key="frame" x="40" y="35" width="520" height="70"/>
                                             <subviews>
@@ -341,12 +345,16 @@
                                         </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4EB-tt-1pE" secondAttribute="trailing" id="1kD-mm-1BD"/>
                                         <constraint firstAttribute="centerX" secondItem="bTY-lp-Fvb" secondAttribute="centerX" id="35v-Fv-Iot"/>
                                         <constraint firstAttribute="trailing" secondItem="Hcv-re-dTQ" secondAttribute="trailing" id="7zC-ys-DQm"/>
                                         <constraint firstItem="Hcv-re-dTQ" firstAttribute="top" secondItem="GQd-Hc-x1N" secondAttribute="top" id="RPn-8g-uj5"/>
+                                        <constraint firstAttribute="bottom" secondItem="4EB-tt-1pE" secondAttribute="bottom" constant="0.5" id="TJH-Ld-jwx"/>
                                         <constraint firstItem="Hcv-re-dTQ" firstAttribute="leading" secondItem="GQd-Hc-x1N" secondAttribute="leading" id="aZo-JQ-48p"/>
+                                        <constraint firstItem="4EB-tt-1pE" firstAttribute="top" secondItem="GQd-Hc-x1N" secondAttribute="top" id="gQn-lV-dqb"/>
                                         <constraint firstAttribute="trailing" secondItem="bTY-lp-Fvb" secondAttribute="trailing" constant="40" id="kk0-kL-yad"/>
                                         <constraint firstAttribute="centerY" secondItem="bTY-lp-Fvb" secondAttribute="centerY" id="oGH-XE-Mb1"/>
+                                        <constraint firstItem="4EB-tt-1pE" firstAttribute="leading" secondItem="GQd-Hc-x1N" secondAttribute="leading" id="tE9-Or-Npv"/>
                                         <constraint firstAttribute="bottom" secondItem="Hcv-re-dTQ" secondAttribute="bottom" id="xl5-G1-9bg"/>
                                         <constraint firstItem="bTY-lp-Fvb" firstAttribute="leading" secondItem="GQd-Hc-x1N" secondAttribute="leading" constant="40" id="yr1-Ke-NBl"/>
                                     </constraints>
