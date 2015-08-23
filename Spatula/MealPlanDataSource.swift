@@ -30,7 +30,14 @@ class MealPlan: NSObject {
         }
     }
     
+    func numberOfRecipes() -> Int {
+        return self.recipes.count
+    }
+
     func coverImage() -> UIImage? {
+        if self.numberOfRecipes() == 0 {
+            return nil
+        }
         let recipe: Recipe = self.recipes[0]
         return recipe.image
     }
@@ -53,7 +60,7 @@ class MealPlanDataSource: NSObject {
         ["Mini fruit tarts", "Cornbread salad", "Roast beef sandwich on ciabatta", "Strawberry salad"],
         ["Roast beef sandwich on ciabatta", "Southwest grilled fajitas", "Grilled salmon", "Pita with deli meats", "Spicy korean stir fry"],
         ["Curry and rice", "Spicy korean stir fry", "Pita with deli meats"],
-        ["Southwest grilled fajitas", "Strawberry salad", "Grilled salmon", "Duck breast with quail eggs and caviar"],
+        ["Grilled salmon", "Southwest grilled fajitas", "Strawberry salad", "Duck breast with quail eggs and caviar"],
         ["Scone with rainbow frosting", "Mini fruit tarts"],
         ["Pita with deli meats", "Roast beef sandwich on ciabatta", "Southwest grilled fajitas"],
         ["Duck breast with quail eggs and caviar", "Grilled salmon"],

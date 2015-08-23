@@ -30,7 +30,7 @@ class SearchViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return RecipeDataSource.recipeCount()
+        return MealPlanDataSource.mealPlanCount()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -41,10 +41,10 @@ class SearchViewController: UITableViewController {
         let labelCount: UILabel = cell.viewWithTag(3) as! UILabel
         
         let row = indexPath.row
-        let recipe: Recipe = RecipeDataSource.recipeWithId(row)!
-        imageView.image = recipe.image
-        labelName.text = recipe.name
-        labelCount.text = "Recipe #\(row)"
+        let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(row)!
+        imageView.image = mealPlan.coverImage()
+        labelName.text = mealPlan.name
+        labelCount.text = "\(mealPlan.numberOfRecipes()) meals"
         return cell
     }
     
