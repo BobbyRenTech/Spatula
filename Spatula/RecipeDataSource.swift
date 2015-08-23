@@ -8,7 +8,26 @@
 
 import UIKit
 
-var singleton: RecipeDataSource?
+var recipeSingleton: RecipeDataSource?
+
+class Recipe: NSObject {
+    // TODO: create as a core data object
+    var name: String = ""
+    var image: UIImage?
+    var shortDescription: String = ""
+    var longDescription: String = ""
+    var id: Int = -1
+    
+    convenience init(id: Int) {
+        self.init()
+
+        self.id = id
+        self.name = RecipeDataSource.name(id)
+        self.image = RecipeDataSource.image(id)
+        self.shortDescription = RecipeDataSource.shortDescriptions(id)
+        self.longDescription = RecipeDataSource.longDescriptions(id)
+    }
+}
 
 class RecipeDataSource: NSObject {
     let images: [String] = ["food1",
@@ -24,6 +43,7 @@ class RecipeDataSource: NSObject {
         "food11",
     ]
 
+    // names also serve as the unique id/key for each recipe
     let names = ["Mini fruit tarts",
         "Roast beef sandwich on ciabatta",
         "Scone with rainbow frosting",
@@ -52,31 +72,49 @@ class RecipeDataSource: NSObject {
     
     class func instance() -> RecipeDataSource {
         // only returns one instance.
-        if singleton == nil {
-            singleton = RecipeDataSource()
+        if recipeSingleton == nil {
+            recipeSingleton = RecipeDataSource()
         }
         
-        return singleton!
+        return recipeSingleton!
     }
     
-    func recipeCount() -> Int {
-        return names.count
+    // MARK: - class methods, used by recipe generator
+    class func recipeCount() -> Int {
+        return RecipeDataSource.instance().names.count
     }
     
-    func image(index: Int) -> UIImage {
-        return UIImage(named: images[index])!
+    class func image(index: Int) -> UIImage {
+        return UIImage(named: RecipeDataSource.instance().images[index])!
     }
     
-    func name(index: Int) -> String {
-        return names[index]
+    class func name(index: Int) -> String {
+        return RecipeDataSource.instance().names[index]
     }
     
-    func shortDescriptions(index: Int) -> String {
-        return descriptions[index]
+    class func shortDescriptions(index: Int) -> String {
+        return RecipeDataSource.instance().descriptions[index]
     }
     
-    func longDescriptions(index: Int) -> String {
+    class func longDescriptions(index: Int) -> String {
         let short = self.shortDescriptions(index)
         return "\(short) \(short) \(short)"
+    }
+    
+    // MARK: Recipe generator/accessor classes
+    class func recipeWithId(id: Int) -> Recipe? {
+        if id < self.recipeCount() {
+            return Recipe(id: id)
+        }
+        return nil
+    }
+    
+    class func recipeByName(name: String) -> Recipe? {
+        for var index = 0; index < self.recipeCount(); index++ {
+            if self.name(index) == name {
+                return Recipe(id: index)
+            }
+        }
+        return nil
     }
 }

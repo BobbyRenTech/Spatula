@@ -10,8 +10,6 @@ import UIKit
 
 class SearchViewController: UITableViewController {
     
-    var source: RecipeDataSource = RecipeDataSource.instance()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,24 +30,26 @@ class SearchViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.source.recipeCount()
+        return RecipeDataSource.recipeCount()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MealPlanCell", forIndexPath: indexPath) as! UITableViewCell
         
         let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
-        let label: UILabel = cell.viewWithTag(2) as! UILabel
+        let labelName: UILabel = cell.viewWithTag(2) as! UILabel
+        let labelCount: UILabel = cell.viewWithTag(3) as! UILabel
         
         let row = indexPath.row
-        imageView.image = self.source.image(row)
-        label.text = self.source.name(row)
-        
+        let recipe: Recipe = RecipeDataSource.recipeWithId(row)!
+        imageView.image = recipe.image
+        labelName.text = recipe.name
+        labelCount.text = "Recipe #\(row)"
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 120
+        return 140
     }
 
     // MARK: Delegate
