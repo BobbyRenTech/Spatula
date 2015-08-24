@@ -21,7 +21,13 @@ class MealPlanViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Done, target: self, action: "close")
+        self.title = self.mealPlan?.name
         self.setupScroll()
+    }
+    
+    func close() {
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
