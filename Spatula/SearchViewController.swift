@@ -55,6 +55,16 @@ class SearchViewController: UITableViewController {
     // MARK: Delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Row \(indexPath.row)")
+        let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(indexPath.row)!
+        
+        self.goToMealPlan(mealPlan)
+    }
+    
+    func goToMealPlan(mealPlan: MealPlan) {
+        let controller: MealPlanViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MealPlanViewController") as! MealPlanViewController
+        controller.mealPlan = mealPlan
+        let nav = UINavigationController(rootViewController: controller)
+        self.navigationController?.presentViewController(nav, animated: true, completion: nil)
     }
     
     /*

@@ -121,7 +121,6 @@
 				808BCBD81B734A470024F23C /* SearchViewController.swift */,
 				AC1422571B2E47C400978990 /* NavigationMenuTableViewController.swift */,
 				AC1422591B2E47E900978990 /* MainViewController.swift */,
-				AC14223C1B2E44B400978990 /* Images.xcassets */,
 				AC14223E1B2E44B400978990 /* LaunchScreen.xib */,
 				AC1422341B2E44B400978990 /* Model.xcdatamodeld */,
 				AC1422301B2E44B400978990 /* Supporting Files */,
@@ -133,6 +132,7 @@
 		AC1422301B2E44B400978990 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AC14223C1B2E44B400978990 /* Images.xcassets */,
 				AC1422311B2E44B400978990 /* Info.plist */,
 			);
 			name = "Supporting Files";
