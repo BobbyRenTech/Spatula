@@ -8,26 +8,55 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-
-    @IBOutlet weak var resultsScrollView: UIScrollView!
+class SearchViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        resultsScrollView.contentSize.height = 1000
-        resultsScrollView.scrollEnabled = true
     }
 
     @IBAction func buttonTap(sender: AnyObject) {
         performSegueWithIdentifier("details", sender: sender)
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Datasource
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MealPlanDataSource.mealPlanCount()
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MealPlanCell", forIndexPath: indexPath) as! UITableViewCell
+        
+        let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
+        let labelName: UILabel = cell.viewWithTag(2) as! UILabel
+        let labelCount: UILabel = cell.viewWithTag(3) as! UILabel
+        
+        let row = indexPath.row
+        let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(row)!
+        imageView.image = mealPlan.coverImage()
+        labelName.text = mealPlan.name
+        labelCount.text = "\(mealPlan.numberOfRecipes()) meals"
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 140
+    }
 
+    // MARK: Delegate
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Row \(indexPath.row)")
+    }
+    
     /*
     // MARK: - Navigation
 
