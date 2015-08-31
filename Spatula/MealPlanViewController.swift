@@ -11,12 +11,14 @@ import UIKit
 class MealPlanViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableViewInfo: UITableView!
-    @IBOutlet weak var scrollMeals: UIScrollView!
+    @IBOutlet weak var recipeScrollView: UIScrollView!
     @IBOutlet weak var selectorDisplayOptions: UISegmentedControl!
     @IBOutlet weak var tableViewDetails: UITableView!
     
     var mealPlan: MealPlan?
     
+    var tapGestures = [UITapGestureRecognizer]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,13 +36,40 @@ class MealPlanViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     // MARK: - Setup/populate with mealplan
     func setupScroll() {
+        recipeScrollView.backgroundColor = UIColor(white:0.3, alpha: 0)
+
         // TODO: for each recipe in the meal plan, create a imageview and add the recipe's image to the scrollview
-        // TODO: add a tap gesture on the scrollview to detect if the user taps a particular imageview
+        var i = 0
+        var imageViews = [UIImageView]()
+        let numOfRecipes:Int = mealPlan!.numberOfRecipes()
+
+        while i < numOfRecipes {
+            imageViews.append(UIImageView(image: mealPlan?.recipes[i].image))
+            imageViews[i].frame = CGRect(x: i*110, y: 10, width: 100, height: 100)
+            imageViews[i].tag = i
+
+            // TODO: add a tap gesture on the scrollview to detect if the user taps a particular imageview
+            tapGestures.append(UITapGestureRecognizer(target: self, action: "updateRecipeDetails:"))
+            imageViews[i].addGestureRecognizer(tapGestures[i])
+            imageViews[i].userInteractionEnabled = true
+
+            recipeScrollView.addSubview(imageViews[i])
+            i++
+        }
+
+        let scrollWidth = CGFloat(numOfRecipes)*110.0 + 10.0
+        recipeScrollView.contentSize.width = scrollWidth
     }
-    
+
+    func updateRecipeDetails(tapGestureRecognizer: UITapGestureRecognizer) {
+        var whichOne = tapGestureRecognizer.view?.tag
+        println("tapped on \(whichOne)")
+    }
+
+
     // MARK: - Table view data source
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
