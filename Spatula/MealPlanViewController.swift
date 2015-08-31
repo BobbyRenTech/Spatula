@@ -38,6 +38,18 @@ class MealPlanViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Setup/populate with mealplan
     func setupScroll() {
         // TODO: for each recipe in the meal plan, create a imageview and add the recipe's image to the scrollview
+        
+        //for recipe in mealPlan?.recipes {
+        //}
+        
+        var i = 0
+        var imageViews = [UIImageView]()
+        while i < mealPlan!.numberOfRecipes() {
+            imageViews.append(UIImageView(image: mealPlan?.recipes[i].image))
+            imageViews[i].frame = CGRect(x: i*110, y: 10, width: 100, height: 100)
+            scrollMeals.addSubview(imageViews[i])
+        }
+        
         // TODO: add a tap gesture on the scrollview to detect if the user taps a particular imageview
     }
     

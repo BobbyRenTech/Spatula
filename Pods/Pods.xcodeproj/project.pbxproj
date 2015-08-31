@@ -7,294 +7,261 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A26714CBFFE3454D1A3EF90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8468B35C5C7DF6F2B70483 /* CoreGraphics.framework */; };
-		88BED150B95201916C8F375B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD5CFD8E9120772F9472B3E /* SWRevealViewController.m */; };
-		88E82CCD4D0C0CFB537460EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C2AD49223B1894EC0ECAB5 /* Foundation.framework */; };
-		8C8AA621BB62C79A3330D787 /* Pods-SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B65C991AA26BF960898E3EA8 /* Pods-SWRevealViewController-dummy.m */; };
-		92F9359370000342ECB207A8 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DD8D5839B1A2083DE0CA597 /* SWRevealViewController.h */; };
-		9FFC7B8DAC96D6E97D1FCA44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C2AD49223B1894EC0ECAB5 /* Foundation.framework */; };
-		E371FF9BD5C7A6E5DE6C581D /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D848192333361C9570FCE0B6 /* Pods-dummy.m */; };
+		4E80B5898E3DD04F6D3F2C00B0C5A391 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A3B055912FEE8BAC3AD426E7C92529 /* Foundation.framework */; };
+		732FEB2924DFC6301B260BB3B375C989 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA996D002681681982262277548334C /* CoreGraphics.framework */; };
+		AF05C7DEB9E328CFFF67C7605FD93E0C /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A13D121E247707A77B328F71C9ACA660 /* Pods-dummy.m */; };
+		AFEAEB4C6F6BD536E4C6D3005A1F66B0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D91D1D13632E0BAD685F01F41063E6 /* SWRevealViewController.m */; };
+		BB24F96E5C196578BDFC275041B55142 /* SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A3B0D27DB369B4464C6E54F86FC62D /* SWRevealViewController-dummy.m */; };
+		E1E583175CFF88D3AD5197A3B5E65259 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2D8AB1745EBBFFAC9A3F01C634FFDC /* SWRevealViewController.h */; };
+		F46CEDEBA1D28DC3DF9A572CB97CEF39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A3B055912FEE8BAC3AD426E7C92529 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		64F82FDBD24E735E04D7FA08 /* PBXContainerItemProxy */ = {
+		702158F9BED1251FEB48E3DCE251B8A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FC2850750879AF6998DE4E51 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 44B724B335D4CD2A38E20828;
-			remoteInfo = "Pods-SWRevealViewController";
+			remoteGlobalIDString = 594434B534C8C8DA75BADFA05F5E996B;
+			remoteInfo = SWRevealViewController;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07F1EB2788E772FA014B4D9D /* Pods-SWRevealViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWRevealViewController-Private.xcconfig"; sourceTree = "<group>"; };
-		28C2AD49223B1894EC0ECAB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4179D30B0072751561EB8EA8 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		591F74DAA1FF50C72DD73241 /* Pods-SWRevealViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWRevealViewController.xcconfig"; sourceTree = "<group>"; };
-		5923BA99B080FA966CA6D4EF /* libPods-SWRevealViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWRevealViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6291BF3DBCA2ADB592F6AD1B /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6DD8D5839B1A2083DE0CA597 /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
-		7F8468B35C5C7DF6F2B70483 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		8FEF092275182D2658E36C15 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		92967BC01DAE9A9BFAE8372D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		A7ADED7BA81E5713FDE23629 /* Pods-SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
-		ADD5CFD8E9120772F9472B3E /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
-		B65C991AA26BF960898E3EA8 /* Pods-SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
-		BB0D97003F4FDB0668605789 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		CBAD1911C548207C9449D0C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D848192333361C9570FCE0B6 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		DDAAACF3DD475D915B040702 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		FB7E8FB2E0B9A8634F3E85AC /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		18D91D1D13632E0BAD685F01F41063E6 /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
+		24A3B0D27DB369B4464C6E54F86FC62D /* SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
+		44CF997F96E7C71E8A31887DCD507E65 /* SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
+		47A3B055912FEE8BAC3AD426E7C92529 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		47CF8053A4209552BAD153FD7ACD6EFC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FA996D002681681982262277548334C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		86A06E78BA6205E194D5B8EEFF461C26 /* SWRevealViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SWRevealViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		8769F1841CC182A4B7DBA6F88A3F1714 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		8827BC3499298F1B30F8D03EFBF4950C /* SWRevealViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.xcconfig; sourceTree = "<group>"; };
+		A13D121E247707A77B328F71C9ACA660 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		A65B795FAF552F17410A5AA1E3CBC34A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD2D8AB1745EBBFFAC9A3F01C634FFDC /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
+		BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		EA791E42C1C7FC59CDED708F62633A01 /* libSWRevealViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSWRevealViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		22198C81AFD7EA6AB21DF1E3 /* Frameworks */ = {
+		CB0E6B5305BEC2F1D6770A22F132F16D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A26714CBFFE3454D1A3EF90 /* CoreGraphics.framework in Frameworks */,
-				9FFC7B8DAC96D6E97D1FCA44 /* Foundation.framework in Frameworks */,
+				F46CEDEBA1D28DC3DF9A572CB97CEF39 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9718325EA792CF2DBCE1573D /* Frameworks */ = {
+		DB5AE98F6060F22FEB3240DA87553DF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88E82CCD4D0C0CFB537460EC /* Foundation.framework in Frameworks */,
+				732FEB2924DFC6301B260BB3B375C989 /* CoreGraphics.framework in Frameworks */,
+				4E80B5898E3DD04F6D3F2C00B0C5A391 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1206CFE8BEB52F2EF75CC39C /* Pods */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4179D30B0072751561EB8EA8 /* Pods-acknowledgements.markdown */,
-				FB7E8FB2E0B9A8634F3E85AC /* Pods-acknowledgements.plist */,
-				D848192333361C9570FCE0B6 /* Pods-dummy.m */,
-				BB0D97003F4FDB0668605789 /* Pods-environment.h */,
-				DDAAACF3DD475D915B040702 /* Pods-resources.sh */,
-				92967BC01DAE9A9BFAE8372D /* Pods.debug.xcconfig */,
-				8FEF092275182D2658E36C15 /* Pods.release.xcconfig */,
+				9394A58D265A8CD1DEB9085F67D2619C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				EF919DCAD7230EFA1F7FA3DC5EA3DDED /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				D2411A5FE7F7A004607BED49990C37F4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9394A58D265A8CD1DEB9085F67D2619C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4FA996D002681681982262277548334C /* CoreGraphics.framework */,
+				47A3B055912FEE8BAC3AD426E7C92529 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		952EEBFAF8F7E620423C9F156F25A506 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */,
+				BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */,
+				A13D121E247707A77B328F71C9ACA660 /* Pods-dummy.m */,
+				641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */,
+				8769F1841CC182A4B7DBA6F88A3F1714 /* Pods.debug.xcconfig */,
+				A65B795FAF552F17410A5AA1E3CBC34A /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		33926F15329AC75C886872FB /* Pods */ = {
+		BC6A6BC73495F1F9297C56E0CAF83264 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A47A1DB05B632F5F0D47B1BE /* SWRevealViewController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		58BE5B3704DFAA9937C45A50 = {
-			isa = PBXGroup;
-			children = (
-				6291BF3DBCA2ADB592F6AD1B /* Podfile */,
-				7FB4A254DD66A562BDDA5B48 /* Frameworks */,
-				33926F15329AC75C886872FB /* Pods */,
-				B29FCA741CE37B33AB47BA53 /* Products */,
-				6392BD008EE284C0D6E20D3E /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		6392BD008EE284C0D6E20D3E /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1206CFE8BEB52F2EF75CC39C /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		701F3203AC7EBC6BC2753D69 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				7F8468B35C5C7DF6F2B70483 /* CoreGraphics.framework */,
-				28C2AD49223B1894EC0ECAB5 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		7FB4A254DD66A562BDDA5B48 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				701F3203AC7EBC6BC2753D69 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		94AB6C54CECFB7E65623A8AD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				591F74DAA1FF50C72DD73241 /* Pods-SWRevealViewController.xcconfig */,
-				07F1EB2788E772FA014B4D9D /* Pods-SWRevealViewController-Private.xcconfig */,
-				B65C991AA26BF960898E3EA8 /* Pods-SWRevealViewController-dummy.m */,
-				A7ADED7BA81E5713FDE23629 /* Pods-SWRevealViewController-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-SWRevealViewController";
-			sourceTree = "<group>";
-		};
-		A47A1DB05B632F5F0D47B1BE /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				6DD8D5839B1A2083DE0CA597 /* SWRevealViewController.h */,
-				ADD5CFD8E9120772F9472B3E /* SWRevealViewController.m */,
-				94AB6C54CECFB7E65623A8AD /* Support Files */,
+				BD2D8AB1745EBBFFAC9A3F01C634FFDC /* SWRevealViewController.h */,
+				18D91D1D13632E0BAD685F01F41063E6 /* SWRevealViewController.m */,
+				F782366FB34CA418D036F9A67D55C85C /* Support Files */,
 			);
 			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
-		B29FCA741CE37B33AB47BA53 /* Products */ = {
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBAD1911C548207C9449D0C8 /* libPods.a */,
-				5923BA99B080FA966CA6D4EF /* libPods-SWRevealViewController.a */,
+				47CF8053A4209552BAD153FD7ACD6EFC /* libPods.a */,
+				EA791E42C1C7FC59CDED708F62633A01 /* libSWRevealViewController.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D2411A5FE7F7A004607BED49990C37F4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				952EEBFAF8F7E620423C9F156F25A506 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EF919DCAD7230EFA1F7FA3DC5EA3DDED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC6A6BC73495F1F9297C56E0CAF83264 /* SWRevealViewController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F782366FB34CA418D036F9A67D55C85C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8827BC3499298F1B30F8D03EFBF4950C /* SWRevealViewController.xcconfig */,
+				86A06E78BA6205E194D5B8EEFF461C26 /* SWRevealViewController-Private.xcconfig */,
+				24A3B0D27DB369B4464C6E54F86FC62D /* SWRevealViewController-dummy.m */,
+				44CF997F96E7C71E8A31887DCD507E65 /* SWRevealViewController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SWRevealViewController";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1ADC79982F01F0EEEB69632E /* Headers */ = {
+		95623E2F01249F206AE080A85DE3FDD9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F9359370000342ECB207A8 /* SWRevealViewController.h in Headers */,
+				E1E583175CFF88D3AD5197A3B5E65259 /* SWRevealViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		17D8EB0A8BB200FC19ACC13F /* Pods */ = {
+		594434B534C8C8DA75BADFA05F5E996B /* SWRevealViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BAB295B6714A3983C19E2A9 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = FDE9BA1A7A8BEFE13B0521FD36685538 /* Build configuration list for PBXNativeTarget "SWRevealViewController" */;
 			buildPhases = (
-				4BC2B48E7B9176CC326A076A /* Sources */,
-				9718325EA792CF2DBCE1573D /* Frameworks */,
+				833F587DFCEAE688819E59C6F87DF96F /* Sources */,
+				DB5AE98F6060F22FEB3240DA87553DF5 /* Frameworks */,
+				95623E2F01249F206AE080A85DE3FDD9 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2D292F84B731FC97CCD1A9E3 /* PBXTargetDependency */,
+			);
+			name = SWRevealViewController;
+			productName = SWRevealViewController;
+			productReference = EA791E42C1C7FC59CDED708F62633A01 /* libSWRevealViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6105396E8C452439D0DEE6D9FFEF9D06 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFBB05A2AA35E9A677EF1AF865413DD /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				832E6997D8A2C9B695AE4EEDCB699A8C /* Sources */,
+				CB0E6B5305BEC2F1D6770A22F132F16D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BABBA21694A6395F26B7B65425B021B2 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = CBAD1911C548207C9449D0C8 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		44B724B335D4CD2A38E20828 /* Pods-SWRevealViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 269952D6E2F7E54DB1FCA352 /* Build configuration list for PBXNativeTarget "Pods-SWRevealViewController" */;
-			buildPhases = (
-				DCC47640B8E48E3E01EBF4C0 /* Sources */,
-				22198C81AFD7EA6AB21DF1E3 /* Frameworks */,
-				1ADC79982F01F0EEEB69632E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-SWRevealViewController";
-			productName = "Pods-SWRevealViewController";
-			productReference = 5923BA99B080FA966CA6D4EF /* libPods-SWRevealViewController.a */;
+			productReference = 47CF8053A4209552BAD153FD7ACD6EFC /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FC2850750879AF6998DE4E51 /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = DFC09985F60C586BED189A8B /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 58BE5B3704DFAA9937C45A50;
-			productRefGroup = B29FCA741CE37B33AB47BA53 /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17D8EB0A8BB200FC19ACC13F /* Pods */,
-				44B724B335D4CD2A38E20828 /* Pods-SWRevealViewController */,
+				6105396E8C452439D0DEE6D9FFEF9D06 /* Pods */,
+				594434B534C8C8DA75BADFA05F5E996B /* SWRevealViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4BC2B48E7B9176CC326A076A /* Sources */ = {
+		832E6997D8A2C9B695AE4EEDCB699A8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E371FF9BD5C7A6E5DE6C581D /* Pods-dummy.m in Sources */,
+				AF05C7DEB9E328CFFF67C7605FD93E0C /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCC47640B8E48E3E01EBF4C0 /* Sources */ = {
+		833F587DFCEAE688819E59C6F87DF96F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8AA621BB62C79A3330D787 /* Pods-SWRevealViewController-dummy.m in Sources */,
-				88BED150B95201916C8F375B /* SWRevealViewController.m in Sources */,
+				BB24F96E5C196578BDFC275041B55142 /* SWRevealViewController-dummy.m in Sources */,
+				AFEAEB4C6F6BD536E4C6D3005A1F66B0 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2D292F84B731FC97CCD1A9E3 /* PBXTargetDependency */ = {
+		BABBA21694A6395F26B7B65425B021B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-SWRevealViewController";
-			target = 44B724B335D4CD2A38E20828 /* Pods-SWRevealViewController */;
-			targetProxy = 64F82FDBD24E735E04D7FA08 /* PBXContainerItemProxy */;
+			name = SWRevealViewController;
+			target = 594434B534C8C8DA75BADFA05F5E996B /* SWRevealViewController */;
+			targetProxy = 702158F9BED1251FEB48E3DCE251B8A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		53C8173E3B2477B1457407A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07F1EB2788E772FA014B4D9D /* Pods-SWRevealViewController-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWRevealViewController/Pods-SWRevealViewController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		735616F916642BFA28C8184C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FEF092275182D2658E36C15 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		749550D7499F2FE9E5B8808E /* Release */ = {
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -328,23 +295,7 @@
 			};
 			name = Release;
 		};
-		D9DE3066C7DE498A10D9D093 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92967BC01DAE9A9BFAE8372D /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		E4EBBB7B7C08484C21AA4A62 /* Debug */ = {
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -383,12 +334,12 @@
 			};
 			name = Debug;
 		};
-		EC4CCE532AE91DA60695B02E /* Debug */ = {
+		24FEDA1A8689A2CBF2B60E07CE8FA1E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07F1EB2788E772FA014B4D9D /* Pods-SWRevealViewController-Private.xcconfig */;
+			baseConfigurationReference = 86A06E78BA6205E194D5B8EEFF461C26 /* SWRevealViewController-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWRevealViewController/Pods-SWRevealViewController-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/SWRevealViewController/SWRevealViewController-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -399,37 +350,85 @@
 			};
 			name = Debug;
 		};
+		4271A45007769691B01600E573704DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8769F1841CC182A4B7DBA6F88A3F1714 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		845CCA219F23FB896C46E6B52E3E796D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86A06E78BA6205E194D5B8EEFF461C26 /* SWRevealViewController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWRevealViewController/SWRevealViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A8290A7329C4599AA5A50E47653E2BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A65B795FAF552F17410A5AA1E3CBC34A /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		269952D6E2F7E54DB1FCA352 /* Build configuration list for PBXNativeTarget "Pods-SWRevealViewController" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC4CCE532AE91DA60695B02E /* Debug */,
-				53C8173E3B2477B1457407A4 /* Release */,
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BAB295B6714A3983C19E2A9 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		BAFBB05A2AA35E9A677EF1AF865413DD /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D9DE3066C7DE498A10D9D093 /* Debug */,
-				735616F916642BFA28C8184C /* Release */,
+				4271A45007769691B01600E573704DD7 /* Debug */,
+				A8290A7329C4599AA5A50E47653E2BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFC09985F60C586BED189A8B /* Build configuration list for PBXProject "Pods" */ = {
+		FDE9BA1A7A8BEFE13B0521FD36685538 /* Build configuration list for PBXNativeTarget "SWRevealViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4EBBB7B7C08484C21AA4A62 /* Debug */,
-				749550D7499F2FE9E5B8808E /* Release */,
+				24FEDA1A8689A2CBF2B60E07CE8FA1E6 /* Debug */,
+				845CCA219F23FB896C46E6B52E3E796D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FC2850750879AF6998DE4E51 /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }
