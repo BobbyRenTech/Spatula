@@ -11,7 +11,7 @@ import UIKit
 class MealPlanViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableViewInfo: UITableView!
-    @IBOutlet weak var scrollMeals: UIScrollView!
+    @IBOutlet weak var recipeScrollView: UIScrollView!
     @IBOutlet weak var selectorDisplayOptions: UISegmentedControl!
     @IBOutlet weak var tableViewDetails: UITableView!
     
@@ -41,13 +41,21 @@ class MealPlanViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //for recipe in mealPlan?.recipes {
         //}
+
         var i = 0
         var imageViews = [UIImageView]()
-        while i < mealPlan!.numberOfRecipes() {
+        let numOfRecipes:Int = mealPlan!.numberOfRecipes()
+        
+        while i < numOfRecipes {
             imageViews.append(UIImageView(image: mealPlan?.recipes[i].image))
             imageViews[i].frame = CGRect(x: i*110, y: 10, width: 100, height: 100)
-            scrollMeals.addSubview(imageViews[i])
+            recipeScrollView.addSubview(imageViews[i])
+            i++
         }
+        
+        let scrollWidth = CGFloat(numOfRecipes)*110.0 + 10.0
+        
+        recipeScrollView.contentSize.width = scrollWidth
         
         // TODO: add a tap gesture on the scrollview to detect if the user taps a particular imageview
     }
