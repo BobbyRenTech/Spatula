@@ -11,7 +11,6 @@ import UIKit
 class CulteryFilterViewController: UIViewController {
 
     @IBOutlet weak var caloriesUISlider: UISlider!
-    @IBOutlet weak var timeUISlider: UISlider!
     @IBOutlet weak var priceUISlider: UISlider!
     
     override func viewDidLoad() {
@@ -22,30 +21,40 @@ class CulteryFilterViewController: UIViewController {
         // TODO: Setup sliders to be discrete
         
         caloriesUISlider.continuous = true
-        caloriesUISlider.addTarget(self, action: "makeDiscrete:", forControlEvents: .ValueChanged)
-    }
-    
-    
-    func makeDiscrete (sender:UISlider!) {
-        if (sender.value < 1.5) {
-            sender.setValue(1.0, animated: false)
-            
-        } else if (sender.value < 2.5) {
-            sender.setValue(2.0, animated: false)
-            
-        } else if (sender.value < 3.5) {
-            sender.setValue(3.0, animated: false)
-            
-        } else if (sender.value < 4.5) {
-            sender.setValue(4.0, animated: false)
-            
-        } else if (sender.value >= 4.5) {
-            sender.setValue(5.0, animated: false)
-        }
+        caloriesUISlider.addTarget(self, action: "makeCaloriesDiscrete:", forControlEvents: .ValueChanged)
         
-
+        priceUISlider.continuous = true
+        priceUISlider.addTarget(self, action: "makePriceDiscrete:", forControlEvents: .ValueChanged)
     }
     
+    
+    func makeCaloriesDiscrete (sender:UISlider!) {
+        if (sender.value < 1625) {
+            sender.setValue(1500, animated: false)
+            
+        } else if (sender.value < 1875) {
+            sender.setValue(1750, animated: false)
+            
+        } else if (sender.value < 2125) {
+            sender.setValue(2000, animated: false)
+            
+        } else if (sender.value < 2375) {
+            sender.setValue(2250, animated: false)
+            
+        } else if (sender.value >= 2375) {
+            sender.setValue(2500, animated: false)
+        }
+    }
+    
+    func makePriceDiscrete (sender:UISlider!) {
+        if (sender.value < 7.5) {
+            sender.setValue(5, animated: false)
+        } else if (sender.value < 12.5) {
+            sender.setValue(10, animated: false)
+        } else if (sender.value >= 12.5) {
+            sender.setValue(15, animated: false)
+        }
+    }
     
     
 
