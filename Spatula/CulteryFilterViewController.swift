@@ -21,8 +21,8 @@ class CulteryFilterViewController: UIViewController {
         
         // TODO: Setup sliders to be discrete
         
-        timeUISlider.continuous = true
-        timeUISlider.addTarget(self, action: "makeDiscrete:", forControlEvents: .ValueChanged)
+        caloriesUISlider.continuous = true
+        caloriesUISlider.addTarget(self, action: "makeDiscrete:", forControlEvents: .ValueChanged)
     }
     
     
