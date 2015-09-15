@@ -41,11 +41,11 @@ class RecipeDataSource: NSObject {
         "food9",
         "food10",
         "food11",
-        "food12",
-        "food13",
-        "food14",
-        "food15",
-        "food16",
+        "MAPLE DIJON SALMON",
+        "CHIPOTLE CHICKEN SKEWERS",
+        "MEATBALL LETTUCE WRAPS",
+        "CHICKEN SKILLET CHARD",
+        "PESTO ZUCCHINI SHRIMP PASTA",
     ]
 
     // names also serve as the unique id/key for each recipe
