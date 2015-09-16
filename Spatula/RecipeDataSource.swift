@@ -41,6 +41,11 @@ class RecipeDataSource: NSObject {
         "food9",
         "food10",
         "food11",
+        "MAPLE DIJON SALMON",
+        "CHIPOTLE CHICKEN SKEWERS",
+        "MEATBALL LETTUCE WRAPS",
+        "CHICKEN SKILLET CHARD",
+        "PESTO ZUCCHINI SHRIMP PASTA",
     ]
 
     // names also serve as the unique id/key for each recipe
@@ -54,7 +59,12 @@ class RecipeDataSource: NSObject {
         "Grilled salmon",
         "Pita with deli meats",
         "Spicy korean stir fry",
-        "Duck breast with quail eggs and caviar"
+        "Duck breast with quail eggs and caviar",
+        "Maple dijon almond crusted salmon",
+        "Adobo honey chicken kebabs",
+        "Turkey meatball lettuce cups",
+        "Skillet chicken with chard",
+        "Pesto zucchini noodles with shrimp",
     ]
     
     let descriptions = ["Tasty mini fruit tarts filled with raspberry, strawberry, blueberry, and snozzberry jam",
@@ -67,7 +77,13 @@ class RecipeDataSource: NSObject {
         "A bed of broccoli and cauliflower make this meal completely low carb. You can make up for it with ice cream.",
         "Honestly I wasn't sure what this was. It looked kind of like a baklava from certain angles.",
         "The juices on the meat have all been grilled away so we added extra gochujang to make it saucy again.",
-        "Everything on this plate is shapeless, formless and is a surprise to your palate. This might actually be a dessert."
+        "Everything on this plate is shapeless, formless and is a surprise to your palate. This might actually be a dessert.",
+        "This maple dijon panko mid adds so much flavor and texture to simple baked salmon. You're gonna want to put in on everything.",
+        "These chicken kebabs are topped with an adobo honey sauce that's sweet, tangy, and ends with a kick. Enjoy with a cool salad and quinoa for a simple, complete meal.",
+        "The crunchiness of the lettuce makes this a summery way to enjoy meatballs",
+        "Salsa turns this ultra simple recipe into something special and delicous. Enjoy over roasted potatoes, and add a dollop of sour cream for richness",
+        "This pesto has a secret ingredient - avocado! - which provides lovely creaminess. Toosed with long strands of zucchini noodles and shrimp.",
+        
     ]
     
     class func instance() -> RecipeDataSource {

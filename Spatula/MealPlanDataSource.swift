@@ -53,7 +53,8 @@ class MealPlanDataSource: NSObject {
         "Sweet tooth",
         "Easy lunch on the go",
         "Romatic dinners",
-        "Everything mealplan"
+        "Everything mealplan",
+        "Paleo Packed MealPlan"
     ]
     
     let recipeNameArrays: [[String]] = [
@@ -75,7 +76,8 @@ class MealPlanDataSource: NSObject {
             "Pita with deli meats",
             "Spicy korean stir fry",
             "Duck breast with quail eggs and caviar"
-        ]
+        ],
+        ["Maple dijon panko crusted salmon","Adobo honey chicken kebabs","Turkey meatball lettuce cups","Skillet chicken with chard","Pesto zucchini noodles with shrimp"],
     ]
 
     // MARK: Singleton
