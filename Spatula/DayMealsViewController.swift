@@ -47,10 +47,10 @@ class DayMealsViewController: UITableViewController {
         let labelCount: UILabel = cell.viewWithTag(3) as! UILabel
         
         let row = indexPath.row
-        let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(row)!
-        imageView.image = mealPlan.coverImage()
+        let mealPlan: Recipe = RecipeDataSource.recipeWithId(row)!
+        imageView.image = mealPlan.image
         labelName.text = mealPlan.name
-        labelCount.text = "\(mealPlan.numberOfRecipes()) meals"
+//        labelCount.text = "\(mealPlan.numberOfRecipes()) meals"
         return cell
     }
     
