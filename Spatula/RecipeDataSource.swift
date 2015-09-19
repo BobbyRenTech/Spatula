@@ -98,7 +98,13 @@ class RecipeDataSource: NSObject {
         250,
         400,
         500,
-        400]
+        400,
+        170,
+        250,
+        220,
+        260,
+        340
+    ]
     
     class func instance() -> RecipeDataSource {
         // only returns one instance.

@@ -18,6 +18,8 @@ class DayMealsViewController: UITableViewController {
 
         // Do any additional setup after loading the view.
         self.randomizeRowIndices()
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "close")
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +27,9 @@ class DayMealsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func close() {
+        self.navigationController!.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 //    Have ot figure out how to hook this part up
 //
@@ -79,17 +83,15 @@ class DayMealsViewController: UITableViewController {
         self.generatedRowIndices.removeAll(keepCapacity: true)
         while self.generatedRowIndices.count < self.totalMeals {
             let index = Int(arc4random_uniform(UInt32(RecipeDataSource.recipeCount())))
-            if find(self.generatedRowIndices, index) == nil {
+            if self.generatedRowIndices.indexOf(index) == nil {
                 self.generatedRowIndices.append(index)
             }
         }
         
-        println("indices: ")
+        print("indices: ")
         for index: Int in self.generatedRowIndices {
-            println("\(index)")
+            print("\(index)")
         }
-        println("\n")
+        print("\n")
     }
-}
-
 }
