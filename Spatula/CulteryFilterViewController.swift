@@ -15,11 +15,7 @@ class CulteryFilterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-
-        // TODO: Setup sliders to be discrete
-
+        
         caloriesUISlider.continuous = true
         caloriesUISlider.addTarget(self, action: "makeCaloriesDiscrete:", forControlEvents: .ValueChanged)
 
