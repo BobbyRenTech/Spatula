@@ -74,14 +74,15 @@ class RecipeDataSource: NSObject {
     
     let calories = [200,
         350,
-        180,
+        220,
         250,
         320,
-        150,
-        200,
+        350,
+        180,
         250,
         400,
-        240]
+        500,
+        400]
     
     class func instance() -> RecipeDataSource {
         // only returns one instance.
