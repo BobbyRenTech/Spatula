@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B5D203FA45B7E52F6E37F98689D2DCF /* PBXContainerItemProxy */ = {
+		6C2AA3E1DDC15951258F499EDA164402 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -197,7 +197,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5B0E0E4A3D879929DBC1B7C8EEBC43C6 /* PBXTargetDependency */,
+				1597A1DAB1CF3565674947BC2007C405 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
@@ -210,7 +210,6 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 			};
@@ -253,11 +252,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B0E0E4A3D879929DBC1B7C8EEBC43C6 /* PBXTargetDependency */ = {
+		1597A1DAB1CF3565674947BC2007C405 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SWRevealViewController;
 			target = 594434B534C8C8DA75BADFA05F5E996B /* SWRevealViewController */;
-			targetProxy = 3B5D203FA45B7E52F6E37F98689D2DCF /* PBXContainerItemProxy */;
+			targetProxy = 6C2AA3E1DDC15951258F499EDA164402 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

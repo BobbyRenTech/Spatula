@@ -10,10 +10,16 @@ import UIKit
 
 class DayMealsViewController: UITableViewController {
 
+    var generatedRowIndices: [Int] = [Int]()
+    let totalMeals: Int = 4
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.randomizeRowIndices()
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "close")
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +27,9 @@ class DayMealsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func close() {
+        self.navigationController!.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 //    Have ot figure out how to hook this part up
 //
@@ -36,7 +44,7 @@ class DayMealsViewController: UITableViewController {
 
     // one for breakfast, lunch, dinner, snack
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return totalMeals
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -44,11 +52,14 @@ class DayMealsViewController: UITableViewController {
 
         let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
         let labelName: UILabel = cell.viewWithTag(2) as! UILabel
-
+        let labelCount: UILabel = cell.viewWithTag(3) as! UILabel
+        
         let row = indexPath.row
-        let recipe: Recipe = RecipeDataSource.recipeWithId(row)!
+        let index = self.generatedRowIndices[row] as Int
+        let recipe: Recipe = RecipeDataSource.recipeWithId(index)!
         imageView.image = recipe.image
         labelName.text = recipe.name
+        labelCount.text = "\(recipe.calories) kCal"
         return cell
     }
 
@@ -67,6 +78,20 @@ class DayMealsViewController: UITableViewController {
         let nav = UINavigationController(rootViewController: controller)
         self.navigationController?.presentViewController(nav, animated: true, completion: nil)
     }
-
-
+    
+    func randomizeRowIndices() {
+        self.generatedRowIndices.removeAll(keepCapacity: true)
+        while self.generatedRowIndices.count < self.totalMeals {
+            let index = Int(arc4random_uniform(UInt32(RecipeDataSource.recipeCount())))
+            if self.generatedRowIndices.indexOf(index) == nil {
+                self.generatedRowIndices.append(index)
+            }
+        }
+        
+        print("indices: ")
+        for index: Int in self.generatedRowIndices {
+            print("\(index)")
+        }
+        print("\n")
+    }
 }

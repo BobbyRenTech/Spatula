@@ -17,6 +17,7 @@ class Recipe: NSObject {
     var shortDescription: String = ""
     var longDescription: String = ""
     var id: Int = -1
+    var calories: Int = 0
     
     convenience init(id: Int) {
         self.init()
@@ -26,6 +27,7 @@ class Recipe: NSObject {
         self.image = RecipeDataSource.image(id)
         self.shortDescription = RecipeDataSource.shortDescriptions(id)
         self.longDescription = RecipeDataSource.longDescriptions(id)
+        self.calories = RecipeDataSource.calories(id)
     }
 }
 
@@ -86,6 +88,24 @@ class RecipeDataSource: NSObject {
         
     ]
     
+    let calories = [200,
+        350,
+        220,
+        250,
+        320,
+        350,
+        180,
+        250,
+        400,
+        500,
+        400,
+        170,
+        250,
+        220,
+        260,
+        340
+    ]
+    
     class func instance() -> RecipeDataSource {
         // only returns one instance.
         if recipeSingleton == nil {
@@ -115,6 +135,10 @@ class RecipeDataSource: NSObject {
     class func longDescriptions(index: Int) -> String {
         let short = self.shortDescriptions(index)
         return "\(short) \(short) \(short)"
+    }
+    
+    class func calories(index: Int) -> Int {
+        return RecipeDataSource.instance().calories[index]
     }
     
     // MARK: Recipe generator/accessor classes
