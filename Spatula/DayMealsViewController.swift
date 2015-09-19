@@ -10,10 +10,14 @@ import UIKit
 
 class DayMealsViewController: UITableViewController {
 
+    var generatedRowIndices: [Int] = [Int]()
+    let totalMeals: Int = 4
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.randomizeRowIndices()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +40,7 @@ class DayMealsViewController: UITableViewController {
 
     // one for breakfast, lunch, dinner, snack
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return totalMeals
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -44,11 +48,14 @@ class DayMealsViewController: UITableViewController {
 
         let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
         let labelName: UILabel = cell.viewWithTag(2) as! UILabel
-
+        let labelCount: UILabel = cell.viewWithTag(3) as! UILabel
+        
         let row = indexPath.row
-        let recipe: Recipe = RecipeDataSource.recipeWithId(row)!
+        let index = self.generatedRowIndices[row] as Int
+        let recipe: Recipe = RecipeDataSource.recipeWithId(index)!
         imageView.image = recipe.image
         labelName.text = recipe.name
+        labelCount.text = "\(recipe.calories) kCal"
         return cell
     }
 
@@ -67,6 +74,22 @@ class DayMealsViewController: UITableViewController {
         let nav = UINavigationController(rootViewController: controller)
         self.navigationController?.presentViewController(nav, animated: true, completion: nil)
     }
-
+    
+    func randomizeRowIndices() {
+        self.generatedRowIndices.removeAll(keepCapacity: true)
+        while self.generatedRowIndices.count < self.totalMeals {
+            let index = Int(arc4random_uniform(UInt32(RecipeDataSource.recipeCount())))
+            if find(self.generatedRowIndices, index) == nil {
+                self.generatedRowIndices.append(index)
+            }
+        }
+        
+        println("indices: ")
+        for index: Int in self.generatedRowIndices {
+            println("\(index)")
+        }
+        println("\n")
+    }
+}
 
 }
