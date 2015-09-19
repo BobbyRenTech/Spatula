@@ -40,17 +40,15 @@ class DayMealsViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MealPlanCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MealCell", forIndexPath: indexPath)
 
         let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
         let labelName: UILabel = cell.viewWithTag(2) as! UILabel
-        let labelCount: UILabel = cell.viewWithTag(3) as! UILabel
 
         let row = indexPath.row
-        let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(row)!
-        imageView.image = mealPlan.coverImage()
-        labelName.text = mealPlan.name
-        labelCount.text = "\(mealPlan.numberOfRecipes()) meals"
+        let recipe: Recipe = RecipeDataSource.recipeWithId(row)!
+        imageView.image = recipe.image
+        labelName.text = recipe.name
         return cell
     }
 
@@ -60,12 +58,12 @@ class DayMealsViewController: UITableViewController {
 
     // MARK: Delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(indexPath.row)!
+        //let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(indexPath.row)!
         self.goToMeal()
     }
 
     func goToMeal() {
-        let controller: UIViewController = UIStoryboard(name: "cutlery", bundle: nil).instantiateViewControllerWithIdentifier("MealViewController") as! UIViewController
+        let controller: UIViewController = UIStoryboard(name: "cutlery", bundle: nil).instantiateViewControllerWithIdentifier("MealViewController") 
         let nav = UINavigationController(rootViewController: controller)
         self.navigationController?.presentViewController(nav, animated: true, completion: nil)
     }

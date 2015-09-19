@@ -34,7 +34,7 @@ class SearchViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MealPlanCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MealPlanCell", forIndexPath: indexPath) 
         
         let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
         let labelName: UILabel = cell.viewWithTag(2) as! UILabel
@@ -54,7 +54,7 @@ class SearchViewController: UITableViewController {
 
     // MARK: Delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Row \(indexPath.row)")
+        print("Row \(indexPath.row)")
         let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(indexPath.row)!
         
         self.goToMealPlan(mealPlan)

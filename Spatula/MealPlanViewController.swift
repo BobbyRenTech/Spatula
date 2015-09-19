@@ -65,8 +65,8 @@ class MealPlanViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func updateRecipeDetails(tapGestureRecognizer: UITapGestureRecognizer) {
-        var whichOne = tapGestureRecognizer.view?.tag
-        println("tapped on \(whichOne)")
+        let whichOne = tapGestureRecognizer.view?.tag
+        print("tapped on \(whichOne)")
     }
 
 
@@ -85,7 +85,7 @@ class MealPlanViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MealPlanCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MealPlanCell", forIndexPath: indexPath) 
         
         // Configure the cell...
         let labelLeft: UILabel = cell.textLabel!

@@ -39,7 +39,7 @@ class NavigationMenuTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NavigationMenuCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("NavigationMenuCell", forIndexPath: indexPath) 
 
         // Configure the cell...
         cell.textLabel!.text = "Menu item \(indexPath.row)"

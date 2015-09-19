@@ -22,7 +22,7 @@ class MealPlan: NSObject {
         self.id = id
         self.name = MealPlanDataSource.name(id)
         
-        var names: [String] = MealPlanDataSource.recipeNameArray(id)
+        let names: [String] = MealPlanDataSource.recipeNameArray(id)
         for name: String in names {
             if let recipe: Recipe = RecipeDataSource.recipeByName(name) {
                 self.recipes.append(recipe)
