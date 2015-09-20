@@ -240,7 +240,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Bobby Ren";
 				TargetAttributes = {
 					AC14222C1B2E44B400978990 = {
@@ -395,6 +395,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -463,6 +464,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spatula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.bobbyren.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Spatula;
 				SWIFT_OBJC_BRIDGING_HEADER = "Spatula/Spatula-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -477,6 +479,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spatula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.bobbyren.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Spatula;
 				SWIFT_OBJC_BRIDGING_HEADER = "Spatula/Spatula-Bridging-Header.h";
 			};
@@ -496,6 +499,7 @@
 				);
 				INFOPLIST_FILE = SpatulaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.bobbyren.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SpatulaTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spatula.app/Spatula";
 			};
@@ -511,6 +515,7 @@
 				);
 				INFOPLIST_FILE = SpatulaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.bobbyren.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SpatulaTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spatula.app/Spatula";
 			};

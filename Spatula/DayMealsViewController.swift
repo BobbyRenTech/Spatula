@@ -31,11 +31,6 @@ class DayMealsViewController: UITableViewController {
         self.navigationController!.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 
-//    Have ot figure out how to hook this part up
-//
-//    @IBAction func buttonTap(sender: AnyObject) {
-//        performSegueWithIdentifier("details", sender: sender)
-//    }
 
     // MARK: Datasource
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -70,14 +65,24 @@ class DayMealsViewController: UITableViewController {
     // MARK: Delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(indexPath.row)!
-        self.goToMeal()
+        performSegueWithIdentifier("goToMealDetails", sender: self)
     }
+    
 
     func goToMeal() {
         let controller: UIViewController = UIStoryboard(name: "cutlery", bundle: nil).instantiateViewControllerWithIdentifier("MealViewController") 
         let nav = UINavigationController(rootViewController: controller)
         self.navigationController?.presentViewController(nav, animated: true, completion: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("called segue")
+        
+    }
+    
+    
+    
+    
     
     func randomizeRowIndices() {
         self.generatedRowIndices.removeAll(keepCapacity: true)
@@ -94,4 +99,6 @@ class DayMealsViewController: UITableViewController {
         }
         print("\n")
     }
+    
+
 }
