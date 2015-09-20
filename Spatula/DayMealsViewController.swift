@@ -12,6 +12,7 @@ class DayMealsViewController: UITableViewController {
 
     var generatedRowIndices: [Int] = [Int]()
     let totalMeals: Int = 4
+    var recipe: Recipe!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +22,6 @@ class DayMealsViewController: UITableViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "close")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func close() {
-        self.navigationController!.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-    }
-
 
     // MARK: Datasource
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -64,25 +55,20 @@ class DayMealsViewController: UITableViewController {
 
     // MARK: Delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //let mealPlan: MealPlan = MealPlanDataSource.mealPlanWithId(indexPath.row)!
+        self.recipe = RecipeDataSource.recipeWithId(indexPath.row)!
         performSegueWithIdentifier("goToMealDetails", sender: self)
     }
     
-
-    func goToMeal() {
-        let controller: UIViewController = UIStoryboard(name: "cutlery", bundle: nil).instantiateViewControllerWithIdentifier("MealViewController") 
-        let nav = UINavigationController(rootViewController: controller)
-        self.navigationController?.presentViewController(nav, animated: true, completion: nil)
+    func close() {
+        self.navigationController!.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("called segue")
+        let controller: MealViewController = UIStoryboard(name: "cutlery", bundle: nil).instantiateViewControllerWithIdentifier("MealViewController") as! MealViewController
+        controller.recipe = self.recipe
         
+        print(controller.recipe.name)
     }
-    
-    
-    
-    
     
     func randomizeRowIndices() {
         self.generatedRowIndices.removeAll(keepCapacity: true)
@@ -100,5 +86,8 @@ class DayMealsViewController: UITableViewController {
         print("\n")
     }
     
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 }

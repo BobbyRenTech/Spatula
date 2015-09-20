@@ -10,10 +10,19 @@ import UIKit
 
 class MealViewController: UIViewController {
 
+    var recipe: Recipe!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var detailsImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        detailsImage.image = recipe.image
+        nameLabel.text = recipe.name
+        print(recipe.name)
+        
     }
 
     override func didReceiveMemoryWarning() {
