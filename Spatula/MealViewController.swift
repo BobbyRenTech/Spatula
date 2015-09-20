@@ -20,8 +20,8 @@ class MealViewController: UIViewController {
         super.viewDidLoad()
 
         detailsImage.image = recipe.image
+        detailsImage.clipsToBounds = true
         nameLabel.text = recipe.name
-        print(recipe.name)
         
     }
 

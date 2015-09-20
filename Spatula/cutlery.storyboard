@@ -363,16 +363,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DiJ-tx-llA" userLabel="images">
                                 <rect key="frame" x="0.0" y="160" width="600" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9vo-md-uE1">
-                                        <rect key="frame" x="174" y="0.0" width="240" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9vo-md-uE1">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="4Nc-bh-1iq"/>
-                                    <constraint firstItem="9vo-md-uE1" firstAttribute="leading" secondItem="DiJ-tx-llA" secondAttribute="leading" constant="174" id="BtT-6B-yzu"/>
-                                    <constraint firstAttribute="trailing" secondItem="9vo-md-uE1" secondAttribute="trailing" constant="186" id="tz7-va-IFX"/>
-                                    <constraint firstAttribute="bottom" secondItem="9vo-md-uE1" secondAttribute="bottom" constant="-28" id="wvp-p0-drI"/>
+                                    <constraint firstItem="9vo-md-uE1" firstAttribute="leading" secondItem="DiJ-tx-llA" secondAttribute="leading" id="BtT-6B-yzu"/>
+                                    <constraint firstAttribute="trailing" secondItem="9vo-md-uE1" secondAttribute="trailing" id="tz7-va-IFX"/>
+                                    <constraint firstAttribute="bottom" secondItem="9vo-md-uE1" secondAttribute="bottom" id="wvp-p0-drI"/>
                                     <constraint firstItem="9vo-md-uE1" firstAttribute="top" secondItem="DiJ-tx-llA" secondAttribute="top" id="xa6-97-ng6"/>
                                 </constraints>
                             </view>
