@@ -22,7 +22,7 @@ class MealViewController: UIViewController {
         detailsImage.image = recipe.image
         detailsImage.clipsToBounds = true
         nameLabel.text = recipe.name
-        
+                
     }
 
     override func didReceiveMemoryWarning() {

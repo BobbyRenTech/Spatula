@@ -12,12 +12,6 @@ class DayMealsViewController: UITableViewController {
 
     var generatedRowIndices: [Int] = [Int]()
     let totalMeals: Int = 4
-    var breakfastRecipe: Recipe!
-    var lunchRecipe: Recipe!
-    var dinnerRecipe: Recipe!
-    var snackRecipe: Recipe!
-    
-    var recipes: [Recipe] = [Recipe]()
     var selectedMeal: Int!
 
     
@@ -54,8 +48,6 @@ class DayMealsViewController: UITableViewController {
         labelName.text = recipe.name
         labelCount.text = "\(recipe.calories) kCal"
         
-        recipes.append(recipe)
-        
         return cell
     }
 
@@ -75,7 +67,7 @@ class DayMealsViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! MealViewController
-        controller.recipe = recipes[selectedMeal]
+        controller.recipe = RecipeDataSource.recipeWithId(generatedRowIndices[selectedMeal])!
     }
     
     func randomizeRowIndices() {
