@@ -18,7 +18,6 @@ class DayMealsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         self.randomizeRowIndices()
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "close")
@@ -68,6 +67,7 @@ class DayMealsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! MealViewController
         controller.recipe = RecipeDataSource.recipeWithId(generatedRowIndices[selectedMeal])!
+        controller.recipeType = selectedMeal
     }
     
     func randomizeRowIndices() {

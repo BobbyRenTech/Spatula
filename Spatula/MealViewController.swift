@@ -11,28 +11,62 @@ import UIKit
 class MealViewController: UIViewController {
 
     var recipe: Recipe!
+    var recipeType: Int!
+    var selectedTab: Int = 0
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailsImage: UIImageView!
     
+    @IBOutlet weak var detailsTab: UIButton!
+    @IBOutlet weak var ingredientsTab: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // setup navigator
         self.navigationController!.navigationBar.translucent = false
+        self.navigationController!.hidesBarsOnSwipe = true
         
+        switch recipeType {
+        case 0:
+            self.navigationItem.title = "Breakfast"
+        case 1:
+            self.navigationItem.title = "Lunch"
+        case 2:
+            self.navigationItem.title = "Dinner"
+        default:
+            self.navigationItem.title = "Snack"
+        }
+        
+        // load info for recipe
         detailsImage.image = recipe.image
         detailsImage.clipsToBounds = true
         nameLabel.text = recipe.name
-                
+        
+        detailsTab.tag = 0
+        ingredientsTab.tag = 1
+    }
+    
+    
+
+    @IBAction func selectTab(sender: AnyObject) {
+        
+        if sender.tag == 0 {
+            showDetails()
+        } else if sender.tag == 1 {
+            showIngredients()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func showDetails() {
+        print("showdetails")
     }
-
-
+    
+    func showIngredients() {
+        print("showIngredients")
+    }
+    
+    
     /*
     // MARK: - Navigation
 
