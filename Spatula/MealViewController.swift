@@ -19,6 +19,8 @@ class MealViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController!.navigationBar.translucent = false
+        
         detailsImage.image = recipe.image
         detailsImage.clipsToBounds = true
         nameLabel.text = recipe.name
