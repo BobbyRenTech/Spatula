@@ -13,15 +13,22 @@ class MealViewController: UIViewController {
     var recipe: Recipe!
     var recipeType: Int!
     var selectedTab: Int = 0
+    var viewWidth: CGFloat!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailsImage: UIImageView!
-    
     @IBOutlet weak var detailsTab: UIButton!
     @IBOutlet weak var ingredientsTab: UIButton!
+    @IBOutlet weak var detailsContent: UIView!
+    @IBOutlet weak var ingredientsContent: UIView!
+    @IBOutlet weak var ingredientsContentLeadingConstraint: NSLayoutConstraint!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewWidth = self.view.frame.width
 
         // setup navigator
         self.navigationController!.navigationBar.translucent = false
@@ -63,7 +70,20 @@ class MealViewController: UIViewController {
     }
     
     func showIngredients() {
-        print("showIngredients")
+        // we probably need to get the width of the containing view
+        // animate the constraint to have the x position to be zero for the ingredients container
+        // animate the constraint to have the x position to be -width for the
+        
+        self.view.layoutIfNeeded()
+        UIView.animateWithDuration(0.3) { () -> Void in
+            
+            self.ingredientsContentLeadingConstraint.constant = 0.0
+            
+            
+            
+            self.view.layoutIfNeeded()
+        }
+        
     }
     
     
