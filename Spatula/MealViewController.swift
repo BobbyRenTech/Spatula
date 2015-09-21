@@ -21,8 +21,8 @@ class MealViewController: UIViewController {
     @IBOutlet weak var ingredientsTab: UIButton!
     @IBOutlet weak var detailsContent: UIView!
     @IBOutlet weak var ingredientsContent: UIView!
-    @IBOutlet weak var ingredientsContentLeadingConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var detailsContentLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var ingredientsTrailingConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -58,31 +58,43 @@ class MealViewController: UIViewController {
 
     @IBAction func selectTab(sender: AnyObject) {
         
-        if sender.tag == 0 {
+        if sender.tag == 0 && selectedTab != 0 {
             showDetails()
-        } else if sender.tag == 1 {
+        } else if sender.tag == 1 && selectedTab != 1 {
             showIngredients()
         }
     }
 
     func showDetails() {
-        print("showdetails")
-    }
-    
-    func showIngredients() {
-        // we probably need to get the width of the containing view
-        // animate the constraint to have the x position to be zero for the ingredients container
-        // animate the constraint to have the x position to be -width for the
-        
         self.view.layoutIfNeeded()
         UIView.animateWithDuration(0.3) { () -> Void in
             
-            self.ingredientsContentLeadingConstraint.constant = 0.0
             
+            self.view.removeConstraint(self.ingredientsTrailingConstraint)
             
+            self.view.addConstraint(self.detailsContentLeadingConstraint)
+            self.detailsContentLeadingConstraint.constant = -20.0
+
+            self.view.layoutIfNeeded()
+        }
+        
+        selectedTab = 0
+    }
+    
+    func showIngredients() {
+        self.view.layoutIfNeeded()
+        UIView.animateWithDuration(0.3) { () -> Void in
+            
+            self.view.removeConstraint(self.detailsContentLeadingConstraint)
+
+            self.ingredientsTrailingConstraint.constant = -20.0
+            self.view.addConstraint(self.ingredientsTrailingConstraint)
+
             
             self.view.layoutIfNeeded()
         }
+        
+        selectedTab = 1
         
     }
     

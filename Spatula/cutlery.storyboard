@@ -413,7 +413,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.088474030610000004" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMc-FQ-SI9" userLabel="ingredients content">
                                 <rect key="frame" x="600" y="180" width="600" height="356"/>
@@ -425,34 +425,36 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.020097103580000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="DiJ-tx-llA" firstAttribute="leading" secondItem="kMH-ar-r5t" secondAttribute="leadingMargin" constant="-20" id="4K1-sj-evR"/>
-                            <constraint firstItem="KMc-FQ-SI9" firstAttribute="leading" secondItem="kMH-ar-r5t" secondAttribute="leadingMargin" constant="580" id="8AC-VB-oLg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Gxy-UJ-RuE" secondAttribute="trailing" constant="-20" id="N2j-k7-706"/>
+                            <constraint firstItem="Gxy-UJ-RuE" firstAttribute="width" secondItem="kMH-ar-r5t" secondAttribute="width" id="IXU-ez-gH1"/>
                             <constraint firstItem="oHq-cc-sDg" firstAttribute="top" secondItem="KMc-FQ-SI9" secondAttribute="bottom" id="Tb3-X2-hR4"/>
                             <constraint firstItem="oHq-cc-sDg" firstAttribute="top" secondItem="Gxy-UJ-RuE" secondAttribute="bottom" id="UJL-Ih-Zx6"/>
+                            <constraint firstItem="Gxy-UJ-RuE" firstAttribute="leading" secondItem="kMH-ar-r5t" secondAttribute="leadingMargin" constant="-20" id="YqN-WO-STU"/>
                             <constraint firstItem="Gxy-UJ-RuE" firstAttribute="top" secondItem="T8a-Ab-ym0" secondAttribute="bottom" id="a1M-gL-Gwy"/>
                             <constraint firstItem="DiJ-tx-llA" firstAttribute="top" secondItem="PHC-Ny-uX4" secondAttribute="bottom" id="bQf-eH-h1F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T8a-Ab-ym0" secondAttribute="trailing" constant="-20" id="cy3-UY-6iW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KMc-FQ-SI9" secondAttribute="trailing" constant="-620" id="efD-rG-uWj"/>
+                            <constraint firstItem="KMc-FQ-SI9" firstAttribute="leading" secondItem="Gxy-UJ-RuE" secondAttribute="trailing" id="g57-bG-mUW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DiJ-tx-llA" secondAttribute="trailing" constant="-20" id="hrz-L9-u3M"/>
+                            <constraint firstItem="KMc-FQ-SI9" firstAttribute="width" secondItem="kMH-ar-r5t" secondAttribute="width" id="kA3-7d-QLN"/>
                             <constraint firstItem="KMc-FQ-SI9" firstAttribute="top" secondItem="Gxy-UJ-RuE" secondAttribute="top" id="mNZ-4M-Y1A"/>
                             <constraint firstItem="T8a-Ab-ym0" firstAttribute="top" secondItem="DiJ-tx-llA" secondAttribute="bottom" id="mnu-Xa-ndY"/>
-                            <constraint firstItem="KMc-FQ-SI9" firstAttribute="width" secondItem="Gxy-UJ-RuE" secondAttribute="width" id="o2S-L1-lpi"/>
-                            <constraint firstItem="Gxy-UJ-RuE" firstAttribute="leading" secondItem="kMH-ar-r5t" secondAttribute="leadingMargin" constant="-20" id="u1h-1O-zxM"/>
                             <constraint firstItem="T8a-Ab-ym0" firstAttribute="leading" secondItem="kMH-ar-r5t" secondAttribute="leadingMargin" constant="-20" id="uOB-cZ-68C"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="detailsContent" destination="Gxy-UJ-RuE" id="N8a-sm-XPW"/>
+                        <outlet property="detailsContentLeadingConstraint" destination="YqN-WO-STU" id="yqn-Ku-cRi"/>
                         <outlet property="detailsImage" destination="9vo-md-uE1" id="ssq-gi-h17"/>
                         <outlet property="detailsTab" destination="w3h-Z9-Fz0" id="DVl-fI-Sec"/>
                         <outlet property="ingredientsContent" destination="KMc-FQ-SI9" id="t7b-zd-ZZC"/>
-                        <outlet property="ingredientsContentLeadingConstraint" destination="8AC-VB-oLg" id="tTr-sL-BWe"/>
                         <outlet property="ingredientsTab" destination="pPY-nT-bPD" id="7Om-wV-w22"/>
+                        <outlet property="ingredientsTrailingConstraint" destination="efD-rG-uWj" id="7jY-Tp-sLU"/>
                         <outlet property="nameLabel" destination="SFh-nf-WMk" id="jYS-oM-gSb"/>
                     </connections>
                 </viewController>
