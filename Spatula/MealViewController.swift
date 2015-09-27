@@ -21,7 +21,6 @@ class MealViewController: UIViewController {
     @IBOutlet weak var ingredientsTab: UIButton!
     @IBOutlet weak var detailsContent: UIView!
     @IBOutlet weak var ingredientsContent: UIView!
-    @IBOutlet var detailsContentLeadingConstraint: NSLayoutConstraint!
     @IBOutlet var ingredientsTrailingConstraint: NSLayoutConstraint!
     
     
@@ -53,10 +52,10 @@ class MealViewController: UIViewController {
         detailsTab.tag = 0
         ingredientsTab.tag = 1
         
-        self.detailsContentLeadingConstraint.constant = -20.0
-        self.ingredientsTrailingConstraint.constant = -20.0
-        self.ingredientsTrailingConstraint.active = false
+        self.ingredientsTrailingConstraint.constant = -20 - viewWidth
+        self.view.layoutIfNeeded()
         
+        //print("view Width: \(viewWidth)")
     }
     
     
@@ -73,13 +72,7 @@ class MealViewController: UIViewController {
     func showDetails() {
         self.view.layoutIfNeeded()
         UIView.animateWithDuration(0.3) { () -> Void in
-            
-            
-            self.ingredientsTrailingConstraint.active = false
-            
-            self.ingredientsTrailingConstraint.active = true
-            self.detailsContentLeadingConstraint.constant = -20.0
-
+            self.ingredientsTrailingConstraint.constant = -20 - self.viewWidth
             self.view.layoutIfNeeded()
         }
         
@@ -89,14 +82,7 @@ class MealViewController: UIViewController {
     func showIngredients() {
         self.view.layoutIfNeeded()
         UIView.animateWithDuration(0.3) { () -> Void in
-            
-            self.detailsContentLeadingConstraint.active = false
-
-            self.ingredientsTrailingConstraint.active = true
             self.ingredientsTrailingConstraint.constant = -20.0
-
-
-            
             self.view.layoutIfNeeded()
         }
         

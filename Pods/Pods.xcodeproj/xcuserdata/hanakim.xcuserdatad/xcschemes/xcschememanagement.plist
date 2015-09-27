@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-SWRevealViewController.xcscheme</key>
+		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>SWRevealViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>946360778F663D77F1F8977D</key>
+		<key>594434B534C8C8DA75BADFA05F5E996B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC78153E76B143323395D272</key>
+		<key>6105396E8C452439D0DEE6D9FFEF9D06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
