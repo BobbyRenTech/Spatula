@@ -70,6 +70,9 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         detailsTab.tag = 0
         ingredientsTab.tag = 1
         
+//        ingredientsTableView.layoutMargins = UIEdgeInsetsZero
+//        ingredientsTableView.separatorInset = UIEdgeInsetsZero
+        
         self.ingredientsTrailingConstraint.constant = -20 - viewWidth
         self.view.layoutIfNeeded()
     }
@@ -121,7 +124,7 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let ingredientNameLabel: UILabel = cell!.viewWithTag(1) as! UILabel
         let ingredientAmountLabel: UILabel = cell!.viewWithTag(2) as! UILabel
         
-        cell!.separatorInset.left = 0.0
+        cell!.separatorInset = UIEdgeInsetsZero
         
         ingredientNameLabel.text = ingredients[row]
         ingredientAmountLabel.text = ingredientAmounts[row]
