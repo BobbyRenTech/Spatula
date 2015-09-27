@@ -526,21 +526,21 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpj-gZ-J5Z">
-                                                            <rect key="frame" x="28" y="12" width="480" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ingredient Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpj-gZ-J5Z">
+                                                            <rect key="frame" x="20" y="12" width="480" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwN-Ck-Ns3" userLabel="Ingredient Amount">
-                                                            <rect key="frame" x="550" y="11.5" width="42" height="20.5"/>
+                                                            <rect key="frame" x="530" y="11.5" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="cwN-Ck-Ns3" secondAttribute="trailing" id="3IR-mm-34V"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="cwN-Ck-Ns3" secondAttribute="trailing" constant="20" id="3IR-mm-34V"/>
                                                         <constraint firstItem="cpj-gZ-J5Z" firstAttribute="width" secondItem="ioP-FE-hIJ" secondAttribute="width" multiplier="0.8" id="9pl-X5-4mq"/>
                                                         <constraint firstItem="cwN-Ck-Ns3" firstAttribute="centerY" secondItem="ioP-FE-hIJ" secondAttribute="centerY" id="AAO-A8-yqy"/>
                                                         <constraint firstItem="cpj-gZ-J5Z" firstAttribute="leading" secondItem="ioP-FE-hIJ" secondAttribute="leadingMargin" constant="20" id="sRv-nq-RPi"/>
