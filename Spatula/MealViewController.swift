@@ -124,7 +124,6 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         ingredientNameLabel.text = ingredients[row]
         ingredientAmountLabel.text = ingredientAmounts[row]
-        print(ingredients[row])
         
         return cell!
     }
