@@ -1,41 +1,45 @@
 //
-//  DayMealsViewController.swift
+//  DailyMealsViewController.swift
 //  Spatula
 //
-//  Created by Hana Kim on 9/13/15.
-//  Copyright (c) 2015 Bobby Ren. All rights reserved.
+//  Created by Hana Kim on 03/10/2015.
+//  Copyright © 2015 Bobby Ren. All rights reserved.
 //
 
 import UIKit
 
-class DayMealsViewController: UITableViewController {
+class DailyMealsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var generatedRowIndices: [Int] = [Int]()
     let totalMeals: Int = 4
     var selectedMeal: Int!
-
+    
+    @IBOutlet weak var filterView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // setup navigator
+        self.navigationController!.navigationBar.translucent = false
 
         self.randomizeRowIndices()
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: "close")
+        filterView.alpha = 0.0
     }
 
-    // MARK: Datasource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     // one for breakfast, lunch, dinner, snack
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return totalMeals
     }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MealCell", forIndexPath: indexPath)
-
+        
         let imageView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
         let labelName: UILabel = cell.viewWithTag(2) as! UILabel
         let labelCount: UILabel = cell.viewWithTag(3) as! UILabel
@@ -47,17 +51,15 @@ class DayMealsViewController: UITableViewController {
         labelName.text = recipe.name
         labelCount.text = "\(recipe.calories) kCal"
         
-        print(recipe.name)
-        
         return cell
     }
-
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 140
     }
-
+    
     // MARK: Delegate
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedMeal = indexPath.row
         performSegueWithIdentifier("goToMealDetails", sender: self)
     }
@@ -87,9 +89,23 @@ class DayMealsViewController: UITableViewController {
         }
         print("\n")
     }
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
