@@ -24,6 +24,8 @@ class DailyMealsViewController: UIViewController, UITableViewDataSource, UITable
         
         // setup navigator
         self.navigationController!.navigationBar.translucent = false
+        
+        self.navigationItem.title = "Tomorrow's Meals"
         let filterIcon = UIImage(named: "icon_filter_small")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: filterIcon, style: UIBarButtonItemStyle.Plain, target: self, action: "openFilters")
         
@@ -34,6 +36,8 @@ class DailyMealsViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBAction func updateFilters(sender: AnyObject) {
         toggleFilters(false)
+        self.randomizeRowIndices()
+        // need to reload table data
     }
     
     func openFilters() {

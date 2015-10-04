@@ -66,12 +66,8 @@ class MealViewController: UIViewController, UITableViewDataSource, UITableViewDe
         mealCalories.text = String(recipe.calories) + " kCal"
         mealDescriptionLabel.text = recipe.longDescription
         
-        
         detailsTab.tag = 0
         ingredientsTab.tag = 1
-        
-//        ingredientsTableView.layoutMargins = UIEdgeInsetsZero
-//        ingredientsTableView.separatorInset = UIEdgeInsetsZero
         
         self.ingredientsTrailingConstraint.constant = -20 - viewWidth
         self.view.layoutIfNeeded()
