@@ -13,20 +13,48 @@ class DailyMealsViewController: UIViewController, UITableViewDataSource, UITable
     var generatedRowIndices: [Int] = [Int]()
     let totalMeals: Int = 4
     var selectedMeal: Int!
+    var viewHeight: CGFloat!
     
     @IBOutlet weak var filterView: UIView!
+    @IBOutlet weak var filterViewTopLayoutConstraint: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // setup navigator
         self.navigationController!.navigationBar.translucent = false
-
+        let filterIcon = UIImage(named: "icon_filter_small")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: filterIcon, style: UIBarButtonItemStyle.Plain, target: self, action: "openFilters")
+        
+        viewHeight = self.view.frame.height
+        
         self.randomizeRowIndices()
-        filterView.alpha = 0.0
     }
 
+    @IBAction func updateFilters(sender: AnyObject) {
+        toggleFilters(false)
+    }
     
+    func openFilters() {
+        toggleFilters(true)
+    }
+    
+    func toggleFilters (showFilters: Bool) {
+        if showFilters {
+            self.view.layoutIfNeeded()
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.filterViewTopLayoutConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            self.view.layoutIfNeeded()
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.filterViewTopLayoutConstraint.constant = -self.viewHeight
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -64,9 +92,6 @@ class DailyMealsViewController: UIViewController, UITableViewDataSource, UITable
         performSegueWithIdentifier("goToMealDetails", sender: self)
     }
     
-    func close() {
-        self.navigationController!.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! MealViewController

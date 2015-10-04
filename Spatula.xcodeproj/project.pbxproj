@@ -10,7 +10,6 @@
 		8012EF7D1BC0B97B007E5145 /* DailyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8012EF7C1BC0B97B007E5145 /* DailyMealsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		802029FD1B96FD0300D91D8C /* cutlery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802029FC1B96FD0300D91D8C /* cutlery.storyboard */; };
 		802029FF1B9700D600D91D8C /* CulteryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802029FE1B9700D600D91D8C /* CulteryFilterViewController.swift */; };
-		8067FED91BA57BB7009F428A /* DayMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067FED81BA57BB7009F428A /* DayMealsViewController.swift */; };
 		8067FEDB1BA6253E009F428A /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067FEDA1BA6253E009F428A /* MealViewController.swift */; };
 		808BCBD91B734A470024F23C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BCBD81B734A470024F23C /* SearchViewController.swift */; };
 		808BCBDB1B735DAB0024F23C /* MealPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BCBDA1B735DAB0024F23C /* MealPlanViewController.swift */; };
@@ -41,7 +40,6 @@
 		8012EF7C1BC0B97B007E5145 /* DailyMealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyMealsViewController.swift; sourceTree = "<group>"; };
 		802029FC1B96FD0300D91D8C /* cutlery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = cutlery.storyboard; sourceTree = "<group>"; };
 		802029FE1B9700D600D91D8C /* CulteryFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CulteryFilterViewController.swift; sourceTree = "<group>"; };
-		8067FED81BA57BB7009F428A /* DayMealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayMealsViewController.swift; sourceTree = "<group>"; };
 		8067FEDA1BA6253E009F428A /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		808BCBD81B734A470024F23C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		808BCBDA1B735DAB0024F23C /* MealPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealPlanViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			children = (
 				802029FC1B96FD0300D91D8C /* cutlery.storyboard */,
 				8012EF7C1BC0B97B007E5145 /* DailyMealsViewController.swift */,
-				8067FED81BA57BB7009F428A /* DayMealsViewController.swift */,
 				8067FEDA1BA6253E009F428A /* MealViewController.swift */,
 				802029FE1B9700D600D91D8C /* CulteryFilterViewController.swift */,
 			);
@@ -341,7 +338,6 @@
 				AC1422361B2E44B400978990 /* Model.xcdatamodeld in Sources */,
 				808BCBDB1B735DAB0024F23C /* MealPlanViewController.swift in Sources */,
 				AC71A8521B88C87F001B1260 /* RecipeDataSource.swift in Sources */,
-				8067FED91BA57BB7009F428A /* DayMealsViewController.swift in Sources */,
 				8012EF7D1BC0B97B007E5145 /* DailyMealsViewController.swift in Sources */,
 				8067FEDB1BA6253E009F428A /* MealViewController.swift in Sources */,
 				AC14225A1B2E47E900978990 /* MainViewController.swift in Sources */,
